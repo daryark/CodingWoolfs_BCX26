@@ -1,1 +1,11 @@
 .env
+
+# RAG source manuals and generated data (too large for GitHub)
+*.pdf
+786398117-B-63945EN-04-08.txt
+832025899-Fanuc-31i-Operators-Manual.txt
+manual_chunks.json
+cnc_events.json
+resolutions.json
+shift_notes.json
+machines.json
