@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Send, Trash2, Mic, Camera, X, Loader, StopCircle } from 'lucide-react'
+import { Send, Trash2, Mic, Camera, X, Loader, StopCircle, MoreHorizontal } from 'lucide-react'
 import { useChatStore } from '../stores/chatStore'
 import { createBedrockClient } from '../utils/bedrock'
 import { VoiceAssistant } from '../utils/voiceAssistant'
@@ -28,8 +28,10 @@ function ChatTab() {
 	} | null>(null)
 	const [isListening, setIsListening] = useState(false)
 	const [currentTranscript, setCurrentTranscript] = useState('')
+	const [menuOpen, setMenuOpen] = useState(false)
 	const [voiceAssistant, setVoiceAssistant] = useState<VoiceAssistant | null>(null)
 	const messagesEndRef = useRef<HTMLDivElement>(null)
+	const menuContainerRef = useRef<HTMLDivElement>(null)
 	const fileInputRef = useRef<HTMLInputElement>(null)
 	const cameraInputRef = useRef<HTMLInputElement>(null)
 	const bedrockClient = createBedrockClient()
@@ -160,17 +162,67 @@ function ChatTab() {
 	const handleClearHistory = () => {
 		if (confirm(t('chat.clearHistory') + '?')) {
 			clearMessages()
+			return true
 		}
+		return false
 	}
+
+	useEffect(() => {
+		const onDocClick = (e: MouseEvent) => {
+			if (!menuContainerRef.current) return
+			const target = e.target as Node
+			if (menuOpen && !menuContainerRef.current.contains(target)) {
+				setMenuOpen(false)
+			}
+		}
+
+		document.addEventListener('mousedown', onDocClick)
+		return () => document.removeEventListener('mousedown', onDocClick)
+	}, [menuOpen])
 
 	return (
 		<div className="h-full flex flex-col bg-white">
+			{/* Top bar: three-dots menu */}
+			<div className="flex items-center justify-end px-3">
+				<div className="relative" ref={menuContainerRef}>
+					<button
+						type="button"
+						onClick={() => setMenuOpen((s) => !s)}
+						className="p-2 rounded-full hover:bg-gray-100"
+						aria-label="More"
+					>
+						<MoreHorizontal size={18} />
+					</button>
+					{menuOpen && (
+						<div className="absolute right-0 mt-2 w-44 bg-white border rounded-md shadow-lg z-20">
+							<button
+								type="button"
+								onClick={() => {
+									const cleared = handleClearHistory()
+									if (cleared) setMenuOpen(false)
+								}}
+								disabled={messages.length === 0 || isLoading}
+								className={clsx(
+									'w-full text-left px-4 py-2 flex items-center gap-2 text-sm',
+									messages.length === 0 || isLoading
+										? 'text-gray-400 cursor-not-allowed'
+										: 'text-gray-700 hover:bg-gray-50'
+								)}
+							>
+								<Trash2 size={16} />
+								<span>{t('chat.clearHistory')}</span>
+							</button>
+						</div>
+					)}
+				</div>
+			</div>
+
 			{/* Messages Container */}
 			<div className="flex-1 overflow-y-auto p-4 space-y-4">
 				{messages.length === 0 ? (
 					<div className="flex items-center justify-center h-full text-gray-400">
 						<div className="text-center">
-							<p className="text-lg">{t('chat.noMessages')}</p>
+							<img src="/logo/logo.jpg" alt="Logo" className="mx-auto max-h-20 opacity-50" />
 						</div>
 					</div>
 				) : (
@@ -323,23 +375,7 @@ function ChatTab() {
 						</div>
 					</div>
 
-					{/* Clear History Button */}
-					<div className="flex gap-2">
-						<button
-							type="button"
-							onClick={handleClearHistory}
-							disabled={messages.length === 0 || isLoading}
-							className={clsx(
-								'flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-sm',
-								messages.length === 0 || isLoading
-									? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-									: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-							)}
-						>
-							<Trash2 size={16} />
-							<span>{t('chat.clearHistory')}</span>
-						</button>
-					</div>
+					{/* Clear History moved to top menu */}
 				</form>
 			</div>
 		</div>
