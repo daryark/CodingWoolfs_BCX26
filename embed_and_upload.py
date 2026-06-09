@@ -43,10 +43,13 @@ MONGO_URI = f"mongodb+srv://woolf:{DB_PASSWORD}@cluster0.lmrqpdm.mongodb.net/?ap
 DB_NAME = "machinewhisperer"
 MODEL = "voyage-3.5"
 DIMENSIONS = 1024
-# Free tier without billing: 3 RPM, 10K TPM — override via env once billing is added
-BATCH_SIZE = int(os.getenv("EMBED_BATCH_SIZE", "8"))
-RATE_LIMIT_WAIT = float(os.getenv("EMBED_RATE_LIMIT_WAIT", "21"))
-MAX_RETRIES = 5
+# Free tier without billing: 3 RPM, 10K TPM (see Voyage dashboard after adding payment: 2000 RPM, 8M TPM for voyage-3.5)
+BATCH_SIZE = int(os.getenv("EMBED_BATCH_SIZE", "4"))
+RATE_LIMIT_WAIT = float(os.getenv("EMBED_RATE_LIMIT_WAIT", "25"))
+MAX_TOKENS_PER_REQUEST = int(os.getenv("EMBED_MAX_TOKENS_PER_REQUEST", "8000"))
+MAX_TOKENS_SINGLE = int(os.getenv("EMBED_MAX_TOKENS_SINGLE", "8000"))
+CHARS_PER_TOKEN = 4
+MAX_RETRIES = 8
 
 EMBEDDED_DIR = Path("embedded")
 
@@ -82,6 +85,42 @@ def doc_for_mongo(doc):
     return {k: v for k, v in doc.items() if not k.startswith("_")}
 
 
+def estimate_tokens(text):
+    return max(1, len(text) // CHARS_PER_TOKEN)
+
+
+def text_for_embedding(text):
+    max_chars = MAX_TOKENS_SINGLE * CHARS_PER_TOKEN
+    if len(text) <= max_chars:
+        return text
+    print(f"\n    Warning: truncating {len(text)} chars → {max_chars} for API token limit")
+    return text[:max_chars]
+
+
+def iter_embed_batches(items, text_fn):
+    """Group items so each API call stays under token and count limits."""
+    batch = []
+    batch_tokens = 0
+
+    for item in items:
+        text = text_for_embedding(text_fn(item))
+        tokens = estimate_tokens(text)
+
+        if batch and (
+            batch_tokens + tokens > MAX_TOKENS_PER_REQUEST
+            or len(batch) >= BATCH_SIZE
+        ):
+            yield batch
+            batch = []
+            batch_tokens = 0
+
+        batch.append((item, text))
+        batch_tokens += tokens
+
+    if batch:
+        yield batch
+
+
 def embed_texts(texts, input_type="document"):
     """Embed a list of texts, return list of embedding vectors."""
     for attempt in range(MAX_RETRIES):
@@ -91,7 +130,8 @@ def embed_texts(texts, input_type="document"):
         except RateLimitError:
             if attempt == MAX_RETRIES - 1:
                 raise
-            wait = RATE_LIMIT_WAIT * (2 ** attempt)
+            # Wait at least one full minute on later retries to reset TPM window
+            wait = max(RATE_LIMIT_WAIT * (2 ** attempt), 65 if attempt >= 2 else RATE_LIMIT_WAIT)
             print(f"\n    Rate limited, waiting {wait:.0f}s before retry...")
             time.sleep(wait)
 
@@ -137,9 +177,10 @@ def embed_and_sync(items, text_fn, label, cache_path, upload_batch_fn):
 
     print(f"  Embedding {len(pending_embed)} remaining {label}...")
 
-    for i in range(0, len(pending_embed), BATCH_SIZE):
-        batch = pending_embed[i:i + BATCH_SIZE]
-        texts = [text_fn(item) for item in batch]
+    for batch_pairs in iter_embed_batches(pending_embed, text_fn):
+        batch = [item for item, _ in batch_pairs]
+        texts = [text for _, text in batch_pairs]
+        batch_tokens = sum(estimate_tokens(t) for t in texts)
         embeddings = embed_texts(texts)
 
         for item, emb in zip(batch, embeddings):
@@ -156,10 +197,8 @@ def embed_and_sync(items, text_fn, label, cache_path, upload_batch_fn):
         save_json(cache_path, list(cached.values()))
 
         done_embed = len(cached)
-        print(f"    {done_embed}/{total} embedded + saved + uploaded", end="\r")
-
-        if i + BATCH_SIZE < len(pending_embed):
-            time.sleep(RATE_LIMIT_WAIT)
+        print(f"    {done_embed}/{total} embedded + saved + uploaded (~{batch_tokens} tok/batch)", end="\r")
+        time.sleep(RATE_LIMIT_WAIT)
 
     print(f"    {total}/{total} embedded ✓")
     return list(cached.values())
@@ -422,7 +461,7 @@ if __name__ == "__main__":
     print("MachineWhisperer Embedding Pipeline")
     print("=" * 40)
     print(f"Model:  {MODEL} ({DIMENSIONS} dimensions)")
-    print(f"Batch:  {BATCH_SIZE} chunks, {RATE_LIMIT_WAIT}s between requests")
+    print(f"Batch:  up to {BATCH_SIZE} chunks / {MAX_TOKENS_PER_REQUEST} tokens, {RATE_LIMIT_WAIT}s between requests")
     print(f"Cache:  {EMBEDDED_DIR}/")
     print(f"DB:     {DB_NAME} @ cluster0.lmrqpdm.mongodb.net")
 
