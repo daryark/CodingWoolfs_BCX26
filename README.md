@@ -1,11 +1,6 @@
-# **Your Team at a Glance**
+## **Coding Woolfs**
+<img width="1280" height="960" alt="photo_2026-06-09_18-47-51" src="https://github.com/user-attachments/assets/ff58a734-04cc-4eb5-98b3-7c44569de646" />
 
-## **CodingWoolfs**
-
-
-> 💡 **Tip:** Create a sheet of paper with your team name on the desk so mentors and organizers can find you easily! 
-
-*[Feel free to include a picture representing your team here]*
 
 ## **Team Members**
 
@@ -18,13 +13,17 @@
 | Mariia Peretiatko | [@MariPeretiatko](https://github.com/MariPeretiatko) | e.g., Backend, Frontend, UX, Pitcher |
 | Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | e.g., Backend, Frontend, UX, Pitcher |
 
-## **Challenge**
-
-*MachineWhisperer*
+## **Challenge: Machine Whisperer**
+Problem: Knowledge leaves in manuals and people heads.
 
 ## **Core Idea**
+#### Our solution: AI-assisted app ####
+- makes knowledge searchable, reusable and improves with every accident
+- reduses the estimated downtime for the machine up to 85% time.*
 
-*[What is your rough solution idea?]*
+<sub>*AI-researched solution with smart search and history ~5-10mins</sub>
+<br>
+<sub>while manual troubleshouting takes ~20-50mins or even more in worst case scenario.</sub>
 
 <br>
 
