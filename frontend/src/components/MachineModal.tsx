@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { X, AlertCircle, CheckCircle, MessageSquare, FileText } from 'lucide-react'
 import { Machine } from './MachineList'
 import { LOGS_HEALTHY, LOGS_ERROR, DUMMY_REPORTS, LogEntry } from '../utils/dummyData'
@@ -16,6 +17,7 @@ interface MachineModalProps {
 }
 
 function MachineModal({ machine, onClose, onStartAssistant }: MachineModalProps) {
+  const { t } = useTranslation()
   const overlayRef = useRef<HTMLDivElement>(null)
   const [activeReport, setActiveReport] = useState<string | null>(null)
 
@@ -62,7 +64,7 @@ function MachineModal({ machine, onClose, onStartAssistant }: MachineModalProps)
         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 flex-shrink-0">
-            <h2 className="text-lg font-semibold text-gray-900">Machine Details</h2>
+            <h2 className="text-lg font-semibold text-gray-900">{t('machines.machineDetails')}</h2>
             <button
               onClick={onClose}
               className="p-1.5 rounded-lg hover:bg-gray-100 transition-colors text-gray-500"
@@ -113,7 +115,7 @@ function MachineModal({ machine, onClose, onStartAssistant }: MachineModalProps)
                   className="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors"
                 >
                   <MessageSquare size={16} />
-                  Start Assistant
+                  {t('machines.startAssistant')}
                 </button>
               </div>
             )}
@@ -123,7 +125,7 @@ function MachineModal({ machine, onClose, onStartAssistant }: MachineModalProps)
 
             {/* Logs */}
             <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Log</h4>
+              <h4 className="text-sm font-semibold text-gray-700 mb-2">{t('machines.eventLog')}</h4>
               <div className="h-52 overflow-y-auto rounded-xl border border-gray-200 bg-gray-50 divide-y divide-gray-100">
                 {logs.map((log) => (
                   <button
@@ -159,7 +161,7 @@ function MachineModal({ machine, onClose, onStartAssistant }: MachineModalProps)
                 ))}
               </div>
               <p className="text-xs text-gray-400 mt-1.5 pl-1">
-                Click any row with a <FileText size={11} className="inline mb-px" /> icon to open its incident report.
+                {t('machines.clickReport')}
               </p>
             </div>
           </div>
