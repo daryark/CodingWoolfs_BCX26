@@ -1,5 +1,10 @@
-from pydantic import BaseModel, Field
-from typing import List, Optional
+from pydantic import BaseModel, Field, BeforeValidator
+from typing import List, Optional, Annotated
+
+def convert_object_id(v):
+    return str(v) if v is not None else v
+
+PyObjectId = Annotated[str, BeforeValidator(convert_object_id)]
 
 class MachineInfo(BaseModel):
     id: str
@@ -14,16 +19,18 @@ class ErrorInfo(BaseModel):
     description: str
     causes: List[str]
     fixHint: str
-    qualifier: str
+    
+    qualifier: Optional[str] = None 
+    
+    boschRexrothClass: Optional[str] = None 
 
 class MTConnectInfo(BaseModel):
     dataItemId: str
     sequence: int
     componentType: str
 
-# This represents your entire MongoDB Document
-class MachineLogResponse(BaseModel):
-    id: str = Field(..., alias="_id") # Converts MongoDB's '_id' object to a clean string
+class CNCEventsResponse(BaseModel):
+    id: PyObjectId = Field(..., alias="_id") 
     timestamp: str
     machine: MachineInfo
     error: ErrorInfo
@@ -37,3 +44,4 @@ class MachineLogResponse(BaseModel):
 
     class Config:
         populate_by_name = True
+        extra = "ignore"
