@@ -13,6 +13,8 @@
 | Mariia Peretiatko | [@MariPeretiatko](https://github.com/MariPeretiatko) | e.g., Backend, Frontend, UX, Pitcher |
 | Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | e.g., Backend, Frontend, UX, Pitcher |
 
+
+Access the deployed version via : http://hackathon.tamasandor.de/
 ## **Challenge: Machine Whisperer**
 Optimize manufacturing maintenance efficiency by building an AI-assistant.
 <br>
@@ -22,14 +24,10 @@ Synthesize dense technical documentation into actionable guidance.
 Deliver exact troubleshooting solution directly to shop-floor.
 
 ## **MVP**
-AI-assistant that reduses the estimated downtime for the machine up to 85% time.*
-<br>
+### AI-assistant that reduses the estimated downtime for the machine up to 85% time.<sup>1</sup>
 Machine Whisperer makes knowledge searchable, reusable and improves with every accident.
-
-<sub>*AI-researched solution with smart search and history ~5-10mins</sub>
 <br>
-<sub>while manual troubleshouting takes ~20-50mins or even more in worst case scenario.</sub>
-
+Minimizes dependency on individual specialists and preserving expert knowledge.
 <br>
 
 - [X] Text, voice and photo troubleshooting.
@@ -37,8 +35,11 @@ Machine Whisperer makes knowledge searchable, reusable and improves with every a
 - [X] Case memory for attempted actions and successful fixes.
 - [X] Cross-machine knowledge from similar models and previous repair cases.
 - [X] Access to machine history, maintainance logs, shift books and technician notes.
+<br>
+<sub><sup>1</sup> AI-assistant with case memory and smart search estimated troubleshooting time: ~5-10mins</sub>
+<br>
+<sub>Manual troubleshouting estimated time ~20-50mins or even more in worst case scenario.</sub>
 
-#### Machine Whisperer reduces downtime, accelerates fault diagnosis, and minimizes dependency on individual specialists by learning from past maintenance activities and preserving expert knowledge, 
 
 ## **Future iteration plan**
 #### Cross-factory expert knowledge network:
@@ -47,10 +48,21 @@ In future iterations, the platform can aggregate anonymized maintenance knowledg
 #### AI maintenance copilot
 Use smart glasses to detect the machine type, error and guide the technician via the troubleshooting process, directly pointing on the details need to be repaired visually and talking without a need to recieve the previous description in text prompt.
 
+## **Tools & Integrations**
+- AWS
+- MongoDB
+- Kiro
 
-Create an App with
+## **Schema and Data modeling**
+#### Data used to create the seed:
+- https://mdcplus.fi/blog/cnc-error-codes-complete-guide
+- https://docs.automation.boschrexroth.com/unit/1317273920/error-classes-and-error-responses/latest/en/
+- https://mdcplus.fi/blog/mazak-cnc-error-codes-explained-and-how-to-fix-them/
 
-Problem: Knowledge leaves in manuals and people heads.
+- Schemas
+- Schemas
+
+
 #### Our solution: 
 *[Sketch your technical architecture or data flow to help understand your technical approach. You can edit the mermaid chart below:]*
 
