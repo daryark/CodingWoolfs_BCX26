@@ -11,49 +11,76 @@ Usage:
     python embed_and_upload.py
 
 What it does:
-    1. Embeds manual_chunks.json     → uploads to MongoDB collection: manual_chunks
-    2. Embeds resolutions.json       → updates documents in MongoDB with embedding field
-    3. Embeds shift_notes.json       → updates documents in MongoDB with embedding field
+    1. Embeds manual_chunks.json + manual_chunks2.json → MongoDB: manual_chunks
+    2. Embeds resolutions.json       → updates MongoDB with embedding field
+    3. Embeds shift_notes.json       → updates MongoDB with embedding field
     4. Creates vector search indexes in Atlas
+
+Progress is saved after each batch to embedded/*.json and uploaded incrementally.
+Re-running skips items that are already embedded locally.
 """
 
 import json
 import os
 import time
+from pathlib import Path
+
 import voyageai
 from dotenv import load_dotenv
-from pymongo import MongoClient, UpdateOne
+from pymongo import MongoClient, ReplaceOne, UpdateOne
 from voyageai.error import RateLimitError
 
 load_dotenv()
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
-VOYAGE_API_KEY  = os.getenv("VOYAGE_API_KEY")
+VOYAGE_API_KEY = os.getenv("VOYAGE_API_KEY")
 if not VOYAGE_API_KEY:
     raise SystemExit("VOYAGE_API_KEY is not set. Add it to .env or your environment.")
-DB_PASSWORD     = os.getenv("DB_PASSWORD")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 if not DB_PASSWORD:
     raise SystemExit("DB_PASSWORD is not set. Add it to .env or your environment.")
-MONGO_URI       = f"mongodb+srv://woolf:{DB_PASSWORD}@cluster0.lmrqpdm.mongodb.net/?appName=Cluster0"
-DB_NAME         = "machinewhisperer"
-MODEL           = "voyage-3.5"
-DIMENSIONS      = 1024
+MONGO_URI = f"mongodb+srv://woolf:{DB_PASSWORD}@cluster0.lmrqpdm.mongodb.net/?appName=Cluster0"
+DB_NAME = "machinewhisperer"
+MODEL = "voyage-3.5"
+DIMENSIONS = 1024
 # Free tier without billing: 3 RPM, 10K TPM — override via env once billing is added
-BATCH_SIZE      = int(os.getenv("EMBED_BATCH_SIZE", "8"))
+BATCH_SIZE = int(os.getenv("EMBED_BATCH_SIZE", "8"))
 RATE_LIMIT_WAIT = float(os.getenv("EMBED_RATE_LIMIT_WAIT", "21"))
-MAX_RETRIES     = 5
+MAX_RETRIES = 5
 
-# Files (adjust paths if needed)
-MANUAL_CHUNKS_FILE  = "manual_chunks.json"
-RESOLUTIONS_FILE    = "resolutions.json"
-SHIFT_NOTES_FILE    = "shift_notes.json"
+EMBEDDED_DIR = Path("embedded")
+
+MANUAL_CHUNK_SOURCES = [
+    ("manual_chunks.json", "manual_chunks.json"),
+    ("manual_chunks2.json", "manual_chunks2.json"),
+]
+RESOLUTIONS_FILE = "resolutions.json"
+SHIFT_NOTES_FILE = "shift_notes.json"
 
 # ─── INIT ─────────────────────────────────────────────────────────────────────
-vo     = voyageai.Client(api_key=VOYAGE_API_KEY)
+vo = voyageai.Client(api_key=VOYAGE_API_KEY)
 client = MongoClient(MONGO_URI)
-db     = client[DB_NAME]
+db = client[DB_NAME]
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────
+
+def load_json(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(path, data):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+    tmp.replace(path)
+
+
+def doc_for_mongo(doc):
+    return {k: v for k, v in doc.items() if not k.startswith("_")}
+
 
 def embed_texts(texts, input_type="document"):
     """Embed a list of texts, return list of embedding vectors."""
@@ -68,51 +95,118 @@ def embed_texts(texts, input_type="document"):
             print(f"\n    Rate limited, waiting {wait:.0f}s before retry...")
             time.sleep(wait)
 
-def batch_embed(items, text_fn, label):
-    """
-    Embed a list of items in batches.
-    text_fn: function that takes an item and returns the text to embed.
-    Returns items with 'embedding' field added.
-    """
-    total = len(items)
-    print(f"  Embedding {total} {label}...")
 
-    for i in range(0, total, BATCH_SIZE):
+def upload_batches(items, upload_batch_fn, label):
+    for i in range(0, len(items), BATCH_SIZE):
         batch = items[i:i + BATCH_SIZE]
-        texts = [text_fn(item) for item in batch]
+        upload_batch_fn(batch)
+        done = min(i + BATCH_SIZE, len(items))
+        print(f"    uploaded {done}/{len(items)} cached {label}", end="\r")
+    if items:
+        print(f"    uploaded {len(items)}/{len(items)} cached {label} ✓")
 
+
+def embed_and_sync(items, text_fn, label, cache_path, upload_batch_fn):
+    """
+    Embed items in batches, saving progress locally and uploading after each batch.
+    Skips items already present in the local cache with an embedding.
+    """
+    cache_path = Path(cache_path)
+    cached = {}
+    if cache_path.exists():
+        for item in load_json(cache_path):
+            if item.get("embedding"):
+                cached[item["_id"]] = item
+
+    total = len(items)
+    done_embed = len(cached)
+    print(f"  {label}: {done_embed}/{total} already embedded locally")
+
+    pending_upload = [cached[i["_id"]] for i in items if i["_id"] in cached and not cached[i["_id"]].get("_mongoSynced")]
+    if pending_upload:
+        print(f"  Uploading {len(pending_upload)} cached {label} not yet in MongoDB...")
+        upload_batches(pending_upload, upload_batch_fn, label)
+        for item in pending_upload:
+            item["_mongoSynced"] = True
+        save_json(cache_path, list(cached.values()))
+
+    pending_embed = [item for item in items if item["_id"] not in cached]
+    if not pending_embed:
+        print(f"  {label}: nothing left to embed ✓")
+        return list(cached.values())
+
+    print(f"  Embedding {len(pending_embed)} remaining {label}...")
+
+    for i in range(0, len(pending_embed), BATCH_SIZE):
+        batch = pending_embed[i:i + BATCH_SIZE]
+        texts = [text_fn(item) for item in batch]
         embeddings = embed_texts(texts)
+
         for item, emb in zip(batch, embeddings):
             item["embedding"] = emb
             item["embeddingModel"] = MODEL
             item["embeddingDimensions"] = DIMENSIONS
+            item["_mongoSynced"] = False
+            cached[item["_id"]] = item
 
-        done = min(i + BATCH_SIZE, total)
-        print(f"    {done}/{total} embedded", end="\r")
+        save_json(cache_path, list(cached.values()))
+        upload_batch_fn(batch)
+        for item in batch:
+            cached[item["_id"]]["_mongoSynced"] = True
+        save_json(cache_path, list(cached.values()))
 
-        if i + BATCH_SIZE < total:
+        done_embed = len(cached)
+        print(f"    {done_embed}/{total} embedded + saved + uploaded", end="\r")
+
+        if i + BATCH_SIZE < len(pending_embed):
             time.sleep(RATE_LIMIT_WAIT)
 
     print(f"    {total}/{total} embedded ✓")
-    return items
+    return list(cached.values())
 
-# ─── 1. MANUAL CHUNKS ─────────────────────────────────────────────────────────
 
-def process_manual_chunks():
-    print("\n[1/3] Manual chunks...")
-    with open(MANUAL_CHUNKS_FILE) as f:
-        chunks = json.load(f)
-
-    # Embed
-    chunks = batch_embed(chunks, lambda c: c["text"], "manual chunks")
-
-    # Upload — drop and recreate for clean state
+def upload_manual_batch(batch):
     col = db["manual_chunks"]
-    col.drop()
-    col.insert_many(chunks)
-    print(f"  Uploaded {len(chunks)} chunks to manual_chunks")
+    ops = [ReplaceOne({"_id": d["_id"]}, doc_for_mongo(d), upsert=True) for d in batch]
+    col.bulk_write(ops)
 
-    # Create vector index
+
+def upload_resolution_batch(batch):
+    col = db["resolutions"]
+    ops = [
+        UpdateOne(
+            {"_id": d["_id"]},
+            {"$set": {
+                "embedding": d["embedding"],
+                "embeddingModel": MODEL,
+                "embeddingDimensions": DIMENSIONS,
+            }},
+            upsert=False,
+        )
+        for d in batch
+    ]
+    col.bulk_write(ops)
+
+
+def upload_shift_note_batch(batch):
+    col = db["shift_notes"]
+    ops = [
+        UpdateOne(
+            {"_id": d["_id"]},
+            {"$set": {
+                "embedding": d["embedding"],
+                "embeddingModel": MODEL,
+                "embeddingDimensions": DIMENSIONS,
+            }},
+            upsert=False,
+        )
+        for d in batch
+    ]
+    col.bulk_write(ops)
+
+
+def create_manual_vector_index():
+    col = db["manual_chunks"]
     try:
         col.create_search_index({
             "name": "manual_vector_index",
@@ -122,53 +216,61 @@ def process_manual_chunks():
                     "type": "vector",
                     "path": "embedding",
                     "numDimensions": DIMENSIONS,
-                    "similarity": "cosine"
+                    "similarity": "cosine",
                 }, {
                     "type": "filter",
-                    "path": "nativeCode"
+                    "path": "nativeCode",
                 }, {
                     "type": "filter",
-                    "path": "sectionType"
+                    "path": "sectionType",
                 }, {
                     "type": "filter",
-                    "path": "controller"
-                }]
-            }
+                    "path": "controller",
+                }],
+            },
         })
         print("  Vector index created on manual_chunks")
     except Exception as e:
         print(f"  Index creation note: {e}")
         print("  → Create index manually in Atlas UI (see instructions below)")
 
+
+# ─── 1. MANUAL CHUNKS ─────────────────────────────────────────────────────────
+
+def process_manual_chunks():
+    print("\n[1/3] Manual chunks...")
+    for source_file, cache_name in MANUAL_CHUNK_SOURCES:
+        if not Path(source_file).exists():
+            print(f"  Skipping {source_file} (file not found)")
+            continue
+
+        chunks = load_json(source_file)
+        label = source_file
+        cache_path = EMBEDDED_DIR / cache_name
+        embed_and_sync(chunks, lambda c: c["text"], label, cache_path, upload_manual_batch)
+
+    create_manual_vector_index()
+
+
 # ─── 2. RESOLUTIONS ───────────────────────────────────────────────────────────
 
 def process_resolutions():
     print("\n[2/3] Resolutions...")
-    with open(RESOLUTIONS_FILE) as f:
-        docs = json.load(f)
+    if not Path(RESOLUTIONS_FILE).exists():
+        print(f"  Skipping {RESOLUTIONS_FILE} (file not found)")
+        return
 
-    # Embed ragSummary field
-    docs = batch_embed(docs, lambda d: d["ragSummary"], "resolutions")
+    docs = load_json(RESOLUTIONS_FILE)
+    embed_and_sync(
+        docs,
+        lambda d: d["ragSummary"],
+        "resolutions",
+        EMBEDDED_DIR / "resolutions.json",
+        upload_resolution_batch,
+    )
 
-    # Upsert into existing collection (preserves documents already imported)
-    col = db["resolutions"]
-    ops = [
-        UpdateOne(
-            {"_id": d["_id"]},
-            {"$set": {
-                "embedding":           d["embedding"],
-                "embeddingModel":      MODEL,
-                "embeddingDimensions": DIMENSIONS
-            }},
-            upsert=False
-        )
-        for d in docs
-    ]
-    result = col.bulk_write(ops)
-    print(f"  Updated {result.modified_count} resolutions with embeddings")
-
-    # Create vector index
     try:
+        col = db["resolutions"]
         col.create_search_index({
             "name": "resolution_vector_index",
             "type": "vectorSearch",
@@ -177,49 +279,40 @@ def process_resolutions():
                     "type": "vector",
                     "path": "embedding",
                     "numDimensions": DIMENSIONS,
-                    "similarity": "cosine"
+                    "similarity": "cosine",
                 }, {
                     "type": "filter",
-                    "path": "nativeCode"
+                    "path": "nativeCode",
                 }, {
                     "type": "filter",
-                    "path": "controller"
-                }]
-            }
+                    "path": "controller",
+                }],
+            },
         })
         print("  Vector index created on resolutions")
     except Exception as e:
         print(f"  Index creation note: {e}")
 
+
 # ─── 3. SHIFT NOTES ───────────────────────────────────────────────────────────
 
 def process_shift_notes():
     print("\n[3/3] Shift notes...")
-    with open(SHIFT_NOTES_FILE) as f:
-        docs = json.load(f)
+    if not Path(SHIFT_NOTES_FILE).exists():
+        print(f"  Skipping {SHIFT_NOTES_FILE} (file not found)")
+        return
 
-    # Embed note field
-    docs = batch_embed(docs, lambda d: d["note"], "shift notes")
+    docs = load_json(SHIFT_NOTES_FILE)
+    embed_and_sync(
+        docs,
+        lambda d: d["note"],
+        "shift notes",
+        EMBEDDED_DIR / "shift_notes.json",
+        upload_shift_note_batch,
+    )
 
-    # Upsert into existing collection
-    col = db["shift_notes"]
-    ops = [
-        UpdateOne(
-            {"_id": d["_id"]},
-            {"$set": {
-                "embedding":           d["embedding"],
-                "embeddingModel":      MODEL,
-                "embeddingDimensions": DIMENSIONS
-            }},
-            upsert=False
-        )
-        for d in docs
-    ]
-    result = col.bulk_write(ops)
-    print(f"  Updated {result.modified_count} shift notes with embeddings")
-
-    # Create vector index
     try:
+        col = db["shift_notes"]
         col.create_search_index({
             "name": "shiftnote_vector_index",
             "type": "vectorSearch",
@@ -228,16 +321,17 @@ def process_shift_notes():
                     "type": "vector",
                     "path": "embedding",
                     "numDimensions": DIMENSIONS,
-                    "similarity": "cosine"
+                    "similarity": "cosine",
                 }, {
                     "type": "filter",
-                    "path": "machineId"
-                }]
-            }
+                    "path": "machineId",
+                }],
+            },
         })
         print("  Vector index created on shift_notes")
     except Exception as e:
         print(f"  Index creation note: {e}")
+
 
 # ─── MANUAL INDEX INSTRUCTIONS ────────────────────────────────────────────────
 
@@ -329,9 +423,9 @@ if __name__ == "__main__":
     print("=" * 40)
     print(f"Model:  {MODEL} ({DIMENSIONS} dimensions)")
     print(f"Batch:  {BATCH_SIZE} chunks, {RATE_LIMIT_WAIT}s between requests")
+    print(f"Cache:  {EMBEDDED_DIR}/")
     print(f"DB:     {DB_NAME} @ cluster0.lmrqpdm.mongodb.net")
 
-    # Verify connection
     try:
         client.admin.command("ping")
         print("MongoDB: connected ✓\n")
