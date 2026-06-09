@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.agentcore.aws.dev/v1/agentcore.json",
+  "name": "AI",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "agentcore:created-by": "agentcore-cli",
+    "agentcore:project-name": "AI"
+  },
+  "runtimes": [
+    {
+      "name": "MyAgent",
+      "build": "Container",
+      "entrypoint": "main.py",
+      "codeLocation": "app/MyAgent/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP"
+    }
+  ],
+  "memories": [],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [],
+  "policyEngines": [],
+  "configBundles": [
+    {
+      "name": "MyAgentConfig",
+      "type": "ConfigurationBundle",
+      "description": "Configuration for MyAgent — managed by agentcore CLI",
+      "components": {
+        "{{runtime:MyAgent}}": {
+          "configuration": {
+            "systemPrompt": "You are a helpful assistant. Use tools when appropriate.",
+            "toolDescriptions": {
+              "add_numbers": "Return the sum of two numbers"
+            }
+          }
+        }
+      },
+      "branchName": "mainline",
+      "commitMessage": "Initial configuration"
+    }
+  ],
+  "abTests": [],
+  "httpGateways": [],
+  "harnesses": [],
+  "datasets": []
+}
