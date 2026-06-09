@@ -15,22 +15,30 @@
 
 ## **Challenge: Machine Whisperer**
 Optimize manufacturing maintenance efficiency by building an AI-assistant.
+<br>
 Synthesize dense technical documentation into actionable guidance.
 
 ## **Core Idea**
 Deliver exact troubleshooting solution directly to shop-floor.
 
 ## **MVP**
-Machine Whisperer is an AI-powered maintenance assistant designed for manufacturing environments. It provides operators and technicians with a real-time overview of machine health and maintenance history across the factory floor.
+AI-assistant that reduses the estimated downtime for the machine up to 85% time.*
+<br>
+Machine Whisperer makes knowledge searchable, reusable and improves with every accident.
 
-The application provides:
-- AI-assisted troubleshooting through text, voice, photo.
-- Step-by-step repair guidance (with references to the source documentation).
-- Case memory for attempted actions and successful fixes.
-- Access to machine history, maintainance logs, shift books and technician notes.
-- Cross-machine knowledge from similar models and previous repair cases.
+<sub>*AI-researched solution with smart search and history ~5-10mins</sub>
+<br>
+<sub>while manual troubleshouting takes ~20-50mins or even more in worst case scenario.</sub>
 
-##### By learning from past maintenance activities and preserving expert knowledge, Machine Whisperer reduces downtime, accelerates fault diagnosis, and minimizes dependency on individual specialists. 
+<br>
+
+- [X] Text, voice and photo troubleshooting.
+- [X] Step-by-step AI-assistant guidance (with references to the source documentation).
+- [X] Case memory for attempted actions and successful fixes.
+- [X] Cross-machine knowledge from similar models and previous repair cases.
+- [X] Access to machine history, maintainance logs, shift books and technician notes.
+
+#### Machine Whisperer reduces downtime, accelerates fault diagnosis, and minimizes dependency on individual specialists by learning from past maintenance activities and preserving expert knowledge, 
 
 ## **Future iteration plan**
 #### Cross-factory expert knowledge network:
@@ -43,16 +51,7 @@ Use smart glasses to detect the machine type, error and guide the technician via
 Create an App with
 
 Problem: Knowledge leaves in manuals and people heads.
-#### Our solution: AI-assistant ####
-- makes knowledge searchable, reusable and improves with every accident
-- reduses the estimated downtime for the machine up to 85% time.*
-
-<sub>*AI-researched solution with smart search and history ~5-10mins</sub>
-<br>
-<sub>while manual troubleshouting takes ~20-50mins or even more in worst case scenario.</sub>
-
-<br>
-
+#### Our solution: 
 *[Sketch your technical architecture or data flow to help understand your technical approach. You can edit the mermaid chart below:]*
 
 ```mermaid
