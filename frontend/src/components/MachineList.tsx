@@ -26,9 +26,11 @@ interface MachineListProps {
 	onMachineSelect?: (machine: Machine) => void
 	/** When true, renders as full-width list (mobile main content) instead of a sidebar */
 	mobileFullWidth?: boolean
+	/** Callback to open the chat (mobile only) */
+	onOpenChat?: () => void
 }
 
-function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth }: MachineListProps) {
+function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOpenChat }: MachineListProps) {
 	const [expanded, setExpanded] = useState(true)
 
 	const statusRing = (status: Machine['status']) => {
@@ -118,6 +120,21 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth }: Ma
 						</button>
 					))}
 				</div>
+
+				{/* Start Chat button — pinned at bottom */}
+				{onOpenChat && (
+					<div className="px-4 py-3 border-t border-gray-100">
+						<button
+							onClick={onOpenChat}
+							className="w-full flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white font-medium py-3 px-4 rounded-xl transition-colors shadow-sm"
+						>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+								<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+							</svg>
+							Start Chat
+						</button>
+					</div>
+				)}
 			</div>
 		)
 	}

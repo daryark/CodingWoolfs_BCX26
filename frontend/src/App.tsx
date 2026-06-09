@@ -70,6 +70,7 @@ function App() {
 							selectedMachineId={selectedMachine?.id}
 							onMachineSelect={handleMachineSelect}
 							mobileFullWidth
+							onOpenChat={() => setMobileShowChat(true)}
 						/>
 					</div>
 				)}
