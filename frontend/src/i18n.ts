@@ -15,8 +15,7 @@ const resources = {
 				close: 'Close',
 			},
 			app: {
-				title: 'Factory Worker Assistant',
-				subtitle: 'AI-Powered Support for Machine Operations',
+				title: 'MachineWhisperer',
 			},
 			nav: {
 				chat: 'Chat',
@@ -70,8 +69,7 @@ const resources = {
 				close: 'Schließen',
 			},
 			app: {
-				title: 'Fabrik-Arbeit-Assistent',
-				subtitle: 'KI-gestützte Unterstützung für Maschinenbetrieb',
+				title: 'MachineWhisperer',
 			},
 			nav: {
 				chat: 'Chat',
