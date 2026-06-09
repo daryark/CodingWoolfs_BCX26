@@ -10,10 +10,13 @@ from bedrock_agentcore.runtime import BedrockAgentCoreApp
 from model.load import load_model
 from mcp_client.client import get_streamable_http_mcp_client
 
+# Import your MongoDB functions
+from mongo_tools import get_machine_status, get_latest_cnc_events, add_shift_note
+
 LangchainInstrumentor().instrument()
 
 app = BedrockAgentCoreApp()
-log = app.logger
+log = logging.getLogger("MyAgent")
 
 _llm = None
 
@@ -25,9 +28,35 @@ def get_or_create_model():
 
 
 DEFAULT_SYSTEM_PROMPT = """
-You are a helpful assistant. Use tools when appropriate.
-
+You are a helpful assistant overseeing factory CNC machines. Use tools when appropriate.
 """
+
+
+# --- Convert your MongoDB functions into LangChain Tools ---
+
+@tool
+def check_machine_status(machine_id: str) -> dict:
+    """
+    Retrieves the details and current setup state of a specific CNC machine.
+    Use this tool whenever the user asks about a machine's parameters or specifications.
+    """
+    return get_machine_status(machine_id)
+
+@tool
+def fetch_latest_cnc_events(limit: int = 5) -> list:
+    """
+    Retrieves the most recent CNC error logs, alerts, or operational events.
+    Use this tool when looking up recent issues or telemetry data from the factory floor.
+    """
+    return get_latest_cnc_events(limit)
+
+@tool
+def log_shift_note(author: str, machine_id: str, note_text: str) -> dict:
+    """
+    Inserts a new operational or maintenance note for a machine during a shift handover.
+    Use this tool when an operator wants to log a comment, event, or warning.
+    """
+    return add_shift_note(author, machine_id, note_text)
 
 
 # Define a simple function tool
@@ -37,18 +66,12 @@ def add_numbers(a: int, b: int) -> int:
     return a + b
 
 
-# Define a collection of tools used by the model
-tools = [add_numbers]
-
+# Gather your native tools into the list LangGraph checks
+tools = [add_numbers, check_machine_status, fetch_latest_cnc_events, log_shift_note]
 
 
 class ConfigBundleCallback(BaseCallbackHandler):
-    """Injects config bundle values into LangGraph agent at runtime.
-
-    BedrockAgentCoreContext.get_config_bundle() fetches the component configuration
-    for the current runtime ARN from the config bundle service. The SDK caches the
-    result and refreshes on bundle version changes.
-    """
+    """Injects config bundle values into LangGraph agent at runtime."""
 
     def on_chain_start(self, serialized: dict, inputs: dict, **kwargs: Any) -> None:
         config = BedrockAgentCoreContext.get_config_bundle()
@@ -74,7 +97,7 @@ async def invoke(payload, context):
     if mcp_client:
         mcp_tools = await mcp_client.get_tools()
 
-    # Define the agent using create_react_agent
+    # Pass BOTH your custom MongoDB tools array and the MCP tools list to LangGraph
     graph = create_react_agent(get_or_create_model(), tools=mcp_tools + tools, prompt=DEFAULT_SYSTEM_PROMPT)
     callback = ConfigBundleCallback()
 
