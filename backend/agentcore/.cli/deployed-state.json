@@ -1,3 +1,24 @@
 {
-  "targets": {}
+  "targets": {
+    "default": {
+      "resources": {
+        "runtimes": {
+          "MyAgent": {
+            "runtimeId": "AI_MyAgent-hdLMX7Cxub",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-west-2:649944876610:runtime/AI_MyAgent-hdLMX7Cxub",
+            "roleArn": "arn:aws:iam::649944876610:role/AgentCore-AI-default-ApplicationAgentMyAgentRuntime-FSIDwk5x3Tlw"
+          }
+        },
+        "configBundles": {
+          "MyAgentConfig": {
+            "bundleId": "AIMyAgentConfig-WUNixK55oA",
+            "bundleArn": "arn:aws:bedrock-agentcore:us-west-2:649944876610:configuration-bundle/AIMyAgentConfig-WUNixK55oA",
+            "versionId": "d5e7b2b9-a96e-40b6-aa14-16e114baad36"
+          }
+        },
+        "stackName": "AgentCore-AI-default",
+        "deployHash": "336b56b592c28205"
+      }
+    }
+  }
 }
