@@ -12,7 +12,7 @@
 | Name | GitHub Handle | Role(s) |
 | :--- | :--- | :--- |
 | Andor Tamás | [@tammasandor](https://github.com/tamasandor) | Backend, DevOps |
-| Dasha Yarkovska | [@daryark](https://github.com/daryark) | e.g., Backend, Frontend, UX, Pitcher |
+| Dasha Yarkovska | [@daryark](https://github.com/daryark) | e.g. UX, Pitcher |
 | Lais Kurdy  | [@lkurdy ](https://github.com/lkurdy ) | Backend, Architecture |
 | Marianna Zhukova | [@fraumarzhuk](https://github.com/fraumarzhuk) | Frontend, UX, Pitcher |
 | Mariia Peretiatko | [@MariPeretiatko](https://github.com/MariPeretiatko) | e.g., Backend, Frontend, UX, Pitcher |
