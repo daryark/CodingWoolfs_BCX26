@@ -83,7 +83,7 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 					<div className="space-y-2 text-sm">
 						<div className="flex items-center gap-2">
 							<div className="w-3 h-3 bg-green-500 rounded-full" />
-							<span className="text-gray-600">{onlineMachines} Online</span>
+							<span className="text-gray-600">{onlineMachines} Working</span>
 						</div>
 						<div className="flex items-center gap-2">
 							<div className="w-3 h-3 bg-red-500 rounded-full" />
@@ -95,7 +95,7 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 
 			{/* Machine List */}
 			<div className="flex-1 p-2 space-y-1">
-				{DUMMY_MACHINES.map((machine) => (
+				{[...DUMMY_MACHINES].sort((a, b) => (a.status === 'error' ? -1 : b.status === 'error' ? 1 : 0)).map((machine) => (
 					<button
 						key={machine.id}
 						onClick={() => onMachineSelect?.(machine)}
