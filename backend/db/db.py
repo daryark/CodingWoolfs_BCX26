@@ -18,4 +18,7 @@ except Exception as e:
 
 # Change "my_database_name" to the actual name of your database in the Atlas UI
 db = client["machinewhisperer"]
-logs_collection = db["cnc_events"]
+cnc_events_collection = db["cnc_events"]
+machines_collection = db["machines"]
+resolutions_collection = db["resolutions"]
+shift_notes_collection = db["shift_notes"]
