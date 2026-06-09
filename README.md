@@ -16,6 +16,7 @@
 | Lais Kurdy  | [@lkurdy ](https://github.com/lkurdy ) | Backend, Architecture |
 | Marianna Zhukova | [@fraumarzhuk](https://github.com/fraumarzhuk) | Frontend, UX, Pitcher |
 | Mariia Peretiatko | [@MariPeretiatko](https://github.com/MariPeretiatko) | e.g., Backend, Frontend, UX, Pitcher |
+| Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | e.g., Backend, Frontend, UX, Pitcher |
 
 ## **Challenge**
 
