@@ -25,8 +25,9 @@ import uuid
 import pdfplumber
 from pathlib import Path
 
-UPLOADS = Path("/mnt/user-data/uploads")
-OUTPUT  = Path("/home/claude/manual_chunks.json")
+ROOT    = Path(__file__).parent
+MANUALS = ROOT / "manuals"
+OUTPUT  = ROOT / "manual_chunks2.json"
 
 CHUNK_SIZE    = 500   # chars for operational chunks
 CHUNK_OVERLAP = 100   # overlap between operational chunks
@@ -819,33 +820,33 @@ if __name__ == "__main__":
     all_chunks = []
 
     print("Chunking Bosch Rexroth IndraDrive...")
-    all_chunks += chunk_rexroth(UPLOADS / "767614.pdf")
+    all_chunks += chunk_rexroth(MANUALS / "767614.pdf")
 
     print("Generating Mazak synthetic alarm chunks...")
     all_chunks += generate_mazak_synthetic_chunks()
 
     print("Chunking Siemens Sinumerik 840D...")
-    all_chunks += chunk_siemens(UPLOADS / "Diagnostics_Manual__Alarms_-_DAsl_0115_en_en-US.pdf")
+    all_chunks += chunk_siemens(MANUALS / "Diagnostics Manual, Alarms - DAsl_0115_en_en-US.pdf")
 
     print("Chunking Haas VF Series...")
     all_chunks += chunk_haas(
-        UPLOADS / "English_-_VF_Series_Service_Manual_-_1996_-_english---vf-series-service-manual---1996.pdf"
+        MANUALS / "English - VF Series Service Manual - 1996 - english---vf-series-service-manual---1996.pdf"
     )
     print("Chunking Haas VF 2003 (operational only)...")
     all_chunks += chunk_haas_2003(
-        UPLOADS / "English_-_VF-Series_Service_Manual_-_2003_-_english---vf-series-service-manual---2003.pdf"
+        MANUALS / "English - VF-Series Service Manual - 2003 - english---vf-series-service-manual---2003.pdf"
     )
 
     print("Chunking Mazak VTC manuals...")
     all_chunks += chunk_mazak(
-        UPLOADS / "67728d.pdf",
-        UPLOADS / "529e3a.pdf"
+        MANUALS / "67728d.pdf",
+        MANUALS / "529e3a.pdf"
     )
 
     print("Chunking Fanuc 31i manuals...")
     all_chunks += chunk_fanuc(
-        UPLOADS / "786398117-B-63945EN-04-08.txt",
-        UPLOADS / "832025899-Fanuc-31i-Operators-Manual.txt"
+        MANUALS / "786398117-B-63945EN-04-08.txt",
+        MANUALS / "832025899-Fanuc-31i-Operators-Manual.txt"
     )
 
     # Stats
