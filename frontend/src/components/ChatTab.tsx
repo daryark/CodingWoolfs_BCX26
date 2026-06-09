@@ -222,7 +222,7 @@ function ChatTab() {
 				{messages.length === 0 ? (
 					<div className="flex items-center justify-center h-full text-gray-400">
 						<div className="text-center">
-							<img src="/logo/logo.jpg" alt="Logo" className="mx-auto max-h-20 opacity-50" />
+							<img src="/logo/logo.jpg" alt="Logo" className="mx-auto max-h-10 opacity-30" />
 						</div>
 					</div>
 				) : (

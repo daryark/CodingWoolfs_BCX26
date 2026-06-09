@@ -3,10 +3,25 @@ import { useTranslation } from 'react-i18next'
 import ChatTab from './components/ChatTab'
 import LanguageSwitcher from './components/LanguageSwitcher'
 import MachineList, { Machine } from './components/MachineList'
+import MachineModal from './components/MachineModal'
 
 function App() {
 	const { t } = useTranslation()
 	const [selectedMachine, setSelectedMachine] = useState<Machine | undefined>()
+	const [modalMachine, setModalMachine] = useState<Machine | undefined>()
+
+	const handleMachineSelect = (machine: Machine) => {
+		setModalMachine(machine)
+	}
+
+	const handleCloseModal = () => {
+		setModalMachine(undefined)
+	}
+
+	const handleStartAssistant = (machine: Machine) => {
+		setSelectedMachine(machine)
+		setModalMachine(undefined)
+	}
 
 	return (
 		<div className="flex flex-col h-screen bg-gray-50">
@@ -23,13 +38,26 @@ function App() {
 			{/* Main Content */}
 			<main className="flex-1 overflow-hidden flex">
 				{/* Machine List Sidebar */}
-				<MachineList selectedMachineId={selectedMachine?.id} onMachineSelect={setSelectedMachine} />
+				<MachineList
+					selectedMachineId={selectedMachine?.id}
+					onMachineSelect={handleMachineSelect}
+				/>
 
 				{/* Content Area */}
 				<div className="flex-1 overflow-hidden flex flex-col">
 					<ChatTab />
 				</div>
-			</main></div>
+			</main>
+
+			{/* Machine Detail Modal */}
+			{modalMachine && (
+				<MachineModal
+					machine={modalMachine}
+					onClose={handleCloseModal}
+					onStartAssistant={handleStartAssistant}
+				/>
+			)}
+		</div>
 	)
 }
 
