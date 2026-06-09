@@ -14,7 +14,9 @@
 | Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | e.g., Backend, Frontend, UX, Pitcher |
 
 
-Access the deployed version via : http://hackathon.tamasandor.de/
+# Access the deployed version via: https://hackathon.tamasandor.de/
+<br>
+
 ## **Challenge: Machine Whisperer**
 Optimize manufacturing maintenance efficiency by building an AI-assistant.
 <br>
@@ -49,21 +51,23 @@ In future iterations, the platform can aggregate anonymized maintenance knowledg
 Use smart glasses to detect the machine type, error and guide the technician via the troubleshooting process, directly pointing on the details need to be repaired visually and talking without a need to recieve the previous description in text prompt.
 
 ## **Tools & Integrations**
-- AWS
-- MongoDB
+- AWS Bedrock
+- MongoDB Atlas
 - Kiro
 
-## **Schema and Data modeling**
+## **Data modeling**
 #### Data used to create the seed:
 - https://mdcplus.fi/blog/cnc-error-codes-complete-guide
 - https://docs.automation.boschrexroth.com/unit/1317273920/error-classes-and-error-responses/latest/en/
 - https://mdcplus.fi/blog/mazak-cnc-error-codes-explained-and-how-to-fix-them/
+- generated history/logs data parts.
 
+## **Schmas**
 - Schemas
 - Schemas
 
 
-#### Our solution: 
+#### Our solution architecture: 
 *[Sketch your technical architecture or data flow to help understand your technical approach. You can edit the mermaid chart below:]*
 
 ```mermaid
