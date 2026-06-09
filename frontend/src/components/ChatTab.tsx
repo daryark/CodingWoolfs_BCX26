@@ -250,9 +250,26 @@ function ChatTab() {
 				{/* Input Form */}
 				<form onSubmit={handleSendMessage} className="space-y-2">
 					<div className="flex gap-2">
-						{/* Left side buttons */}
-						<div className="flex flex-col gap-2">
-							{/* Voice Button */}
+						{/* Left side buttons - upload left of mic */}
+						<div className="flex items-center gap-2">
+							{/* Camera/Upload Button (left) */}
+							<button
+								type="button"
+								onClick={() => fileInputRef.current?.click()}
+								disabled={isLoading || !!selectedImage}
+								className={clsx(
+									'p-2 rounded-lg transition-colors',
+									selectedImage
+										? 'bg-gray-300 text-gray-600 cursor-not-allowed'
+										: 'bg-primary-600 hover:bg-primary-700 text-white',
+									isLoading && 'opacity-50 cursor-not-allowed'
+								)}
+								title={t('photo.uploadPhoto')}
+							>
+								<Camera size={20} />
+							</button>
+
+							{/* Voice Button (right) */}
 							<button
 								type="button"
 								onClick={toggleVoiceInput}
@@ -271,23 +288,6 @@ function ChatTab() {
 								) : (
 									<Mic size={20} />
 								)}
-							</button>
-
-							{/* Camera/Upload Button */}
-							<button
-								type="button"
-								onClick={() => fileInputRef.current?.click()}
-								disabled={isLoading || !!selectedImage}
-								className={clsx(
-									'p-2 rounded-lg transition-colors',
-									selectedImage
-										? 'bg-gray-300 text-gray-600 cursor-not-allowed'
-										: 'bg-primary-600 hover:bg-primary-700 text-white',
-									isLoading && 'opacity-50 cursor-not-allowed'
-								)}
-								title={t('photo.uploadPhoto')}
-							>
-								<Camera size={20} />
 							</button>
 						</div>
 
