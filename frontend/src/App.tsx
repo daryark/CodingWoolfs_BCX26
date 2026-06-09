@@ -41,7 +41,7 @@ function App() {
 							<button
 								onClick={handleBackToList}
 								className="md:hidden p-1.5 -ml-1 rounded-lg hover:bg-gray-100 transition-colors"
-								aria-label="Back to machines"
+								aria-label={t('common.back')}
 							>
 								<ArrowLeft size={22} className="text-gray-700" />
 							</button>

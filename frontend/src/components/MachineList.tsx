@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { AlertCircle } from 'lucide-react'
 import clsx from 'clsx'
 
@@ -11,14 +12,14 @@ export interface Machine {
 }
 
 const DUMMY_MACHINES: Machine[] = [
-	{ id: '1', name: 'CNC Machine 1',   status: 'online', lastUpdate: 'Just now',  photo: '/machines/cncmachine1.webp' },
-	{ id: '2', name: 'CNC Machine 2',   status: 'online', lastUpdate: '2 min ago', photo: '/machines/cncmachine2.jpg' },
-	{ id: '3', name: 'CNC Machine 3',   status: 'online', lastUpdate: '5 min ago', photo: '/machines/cncmachine3.png' },
-	{ id: '4', name: 'Robotic Arm 3',   status: 'error',  lastUpdate: '1 min ago', photo: '/machines/roboticarm.png' },
-	{ id: '5', name: 'Press Machine 1', status: 'online', lastUpdate: '3 min ago', photo: '/machines/pressmachine.webp' },
-	{ id: '6', name: 'Conveyor Belt 2', status: 'online', lastUpdate: '1 min ago', photo: '/machines/conveyorbelt.jpg' },
-	{ id: '7', name: 'Inspection Unit', status: 'online', lastUpdate: '4 min ago', photo: '/machines/inspectionunit.jpg' },
-	{ id: '8', name: 'CNC Machine 4',   status: 'online', lastUpdate: 'Just now',  photo: '/machines/cncmachine4.webp' },
+	{ id: '1', name: 'CNC Machine 1',   status: 'online', lastUpdate: 'justNow',  photo: '/machines/cncmachine1.webp' },
+	{ id: '2', name: 'CNC Machine 2',   status: 'online', lastUpdate: '2min',     photo: '/machines/cncmachine2.jpg' },
+	{ id: '3', name: 'CNC Machine 3',   status: 'online', lastUpdate: '5min',     photo: '/machines/cncmachine3.png' },
+	{ id: '4', name: 'Robotic Arm 3',   status: 'error',  lastUpdate: '1min',     photo: '/machines/roboticarm.png' },
+	{ id: '5', name: 'Press Machine 1', status: 'online', lastUpdate: '3min',     photo: '/machines/pressmachine.webp' },
+	{ id: '6', name: 'Conveyor Belt 2', status: 'online', lastUpdate: '1min',     photo: '/machines/conveyorbelt.jpg' },
+	{ id: '7', name: 'Inspection Unit', status: 'online', lastUpdate: '4min',     photo: '/machines/inspectionunit.jpg' },
+	{ id: '8', name: 'CNC Machine 4',   status: 'online', lastUpdate: 'justNow',  photo: '/machines/cncmachine4.webp' },
 ]
 
 interface MachineListProps {
@@ -31,7 +32,12 @@ interface MachineListProps {
 }
 
 function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOpenChat }: MachineListProps) {
+	const { t } = useTranslation()
 	const [expanded, setExpanded] = useState(true)
+
+	const getLastUpdate = (key: string) => {
+		return t(`machines.time.${key}`)
+	}
 
 	const statusRing = (status: Machine['status']) => {
 		switch (status) {
@@ -66,11 +72,11 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOp
 				<div className="px-4 py-3 border-b border-gray-100 flex items-center gap-4">
 					<div className="flex items-center gap-2 text-sm">
 						<div className="w-3 h-3 bg-green-500 rounded-full" />
-						<span className="text-gray-600">{onlineMachines} Working</span>
+						<span className="text-gray-600">{onlineMachines} {t('machines.working')}</span>
 					</div>
 					<div className="flex items-center gap-2 text-sm">
 						<div className="w-3 h-3 bg-red-500 rounded-full" />
-						<span className="text-gray-600">{errorMachines} Error</span>
+						<span className="text-gray-600">{errorMachines} {t('machines.error')}</span>
 					</div>
 				</div>
 
@@ -114,7 +120,7 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOp
 											<AlertCircle size={16} className="text-red-500 flex-shrink-0" />
 										)}
 									</div>
-									<p className="text-xs text-gray-500 mt-0.5">{machine.lastUpdate}</p>
+									<p className="text-xs text-gray-500 mt-0.5">{getLastUpdate(machine.lastUpdate)}</p>
 								</div>
 							</div>
 						</button>
@@ -131,7 +137,7 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOp
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 								<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
 							</svg>
-							Start Chat
+							{t('machines.startChat')}
 						</button>
 					</div>
 				)}
@@ -151,7 +157,7 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOp
 			<div className="p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
 				<div className="flex items-center justify-between mb-3">
 					<h2 className={clsx('font-semibold text-gray-900 transition-opacity', !expanded && 'hidden')}>
-						Machines
+						{t('machines.title')}
 					</h2>
 					<button
 						onClick={() => setExpanded(!expanded)}
@@ -172,11 +178,11 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOp
 					<div className="space-y-2 text-sm">
 						<div className="flex items-center gap-2">
 							<div className="w-3 h-3 bg-green-500 rounded-full" />
-							<span className="text-gray-600">{onlineMachines} Working</span>
+							<span className="text-gray-600">{onlineMachines} {t('machines.working')}</span>
 						</div>
 						<div className="flex items-center gap-2">
 							<div className="w-3 h-3 bg-red-500 rounded-full" />
-							<span className="text-gray-600">{errorMachines} Error</span>
+							<span className="text-gray-600">{errorMachines} {t('machines.error')}</span>
 						</div>
 					</div>
 				)}
@@ -222,7 +228,7 @@ function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth, onOp
 											<AlertCircle size={15} className="text-red-500 flex-shrink-0 mt-0.5" />
 										)}
 									</div>
-									<p className="text-xs text-gray-500 mt-0.5">{machine.lastUpdate}</p>
+									<p className="text-xs text-gray-500 mt-0.5">{getLastUpdate(machine.lastUpdate)}</p>
 								</div>
 							)}
 						</div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { X, AlertTriangle, Wrench, CheckCircle2, Clock } from 'lucide-react'
 import { LogReport } from '../utils/dummyData'
 
@@ -8,6 +9,7 @@ interface LogReportModalProps {
 }
 
 function LogReportModal({ report, onClose }: LogReportModalProps) {
+  const { t } = useTranslation()
   const overlayRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -35,7 +37,7 @@ function LogReportModal({ report, onClose }: LogReportModalProps) {
         {/* Header */}
         <div className="flex items-start justify-between px-6 py-4 border-b border-gray-100 gap-4">
           <div>
-            <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">Incident Report</p>
+            <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">{t('report.title')}</p>
             <h2 className="text-base font-semibold text-gray-900 leading-snug">{report.title}</h2>
           </div>
           <button
@@ -54,7 +56,7 @@ function LogReportModal({ report, onClose }: LogReportModalProps) {
           <section>
             <div className="flex items-center gap-2 mb-2">
               <AlertTriangle size={16} className="text-red-500 flex-shrink-0" />
-              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Issue</h3>
+              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">{t('report.issue')}</h3>
             </div>
             <div className="bg-red-50 border border-red-100 rounded-xl px-4 py-3">
               <p className="text-sm text-gray-700 leading-relaxed">{report.issue}</p>
@@ -65,7 +67,7 @@ function LogReportModal({ report, onClose }: LogReportModalProps) {
           <section>
             <div className="flex items-center gap-2 mb-2">
               <Wrench size={16} className="text-amber-500 flex-shrink-0" />
-              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">What Was Tried</h3>
+              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">{t('report.whatWasTried')}</h3>
             </div>
             <div className="bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 space-y-2">
               {report.tried.map((step, i) => (
@@ -83,7 +85,7 @@ function LogReportModal({ report, onClose }: LogReportModalProps) {
           <section>
             <div className="flex items-center gap-2 mb-2">
               <CheckCircle2 size={16} className="text-green-500 flex-shrink-0" />
-              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Solution</h3>
+              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">{t('report.solution')}</h3>
             </div>
             <div className="bg-green-50 border border-green-100 rounded-xl px-4 py-3">
               <p className="text-sm text-gray-700 leading-relaxed">{report.solution}</p>
@@ -94,7 +96,7 @@ function LogReportModal({ report, onClose }: LogReportModalProps) {
           {report.resolvedAt && (
             <div className="flex items-center gap-2 text-xs text-gray-400 pt-1">
               <Clock size={13} />
-              <span>Resolved at {report.resolvedAt}</span>
+              <span>{t('report.resolvedAt')} {report.resolvedAt}</span>
             </div>
           )}
         </div>
