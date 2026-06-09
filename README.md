@@ -14,10 +14,36 @@
 | Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | e.g., Backend, Frontend, UX, Pitcher |
 
 ## **Challenge: Machine Whisperer**
-Problem: Knowledge leaves in manuals and people heads.
+Optimize manufacturing maintenance efficiency by building an AI-assistant.
+Synthesize dense technical documentation into actionable guidance.
 
 ## **Core Idea**
-#### Our solution: AI-assisted app ####
+Deliver exact troubleshooting solution directly to shop-floor.
+
+## **MVP**
+Machine Whisperer is an AI-powered maintenance assistant designed for manufacturing environments. It provides operators and technicians with a real-time overview of machine health and maintenance history across the factory floor.
+
+The application provides:
+- AI-assisted troubleshooting through text, voice, photo.
+- Step-by-step repair guidance (with references to the source documentation).
+- Case memory for attempted actions and successful fixes.
+- Access to machine history, maintainance logs, shift books and technician notes.
+- Cross-machine knowledge from similar models and previous repair cases.
+
+##### By learning from past maintenance activities and preserving expert knowledge, Machine Whisperer reduces downtime, accelerates fault diagnosis, and minimizes dependency on individual specialists. 
+
+## **Future iteration plan**
+#### Cross-factory expert knowledge network:
+In future iterations, the platform can aggregate anonymized maintenance knowledge across multiple factories, enabling organizations to benefit from collective operational experience and continuously improving recommendations.
+
+#### AI maintenance copilot
+Use smart glasses to detect the machine type, error and guide the technician via the troubleshooting process, directly pointing on the details need to be repaired visually and talking without a need to recieve the previous description in text prompt.
+
+
+Create an App with
+
+Problem: Knowledge leaves in manuals and people heads.
+#### Our solution: AI-assistant ####
 - makes knowledge searchable, reusable and improves with every accident
 - reduses the estimated downtime for the machine up to 85% time.*
 
