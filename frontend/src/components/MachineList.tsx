@@ -24,9 +24,11 @@ const DUMMY_MACHINES: Machine[] = [
 interface MachineListProps {
 	selectedMachineId?: string
 	onMachineSelect?: (machine: Machine) => void
+	/** When true, renders as full-width list (mobile main content) instead of a sidebar */
+	mobileFullWidth?: boolean
 }
 
-function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
+function MachineList({ selectedMachineId, onMachineSelect, mobileFullWidth }: MachineListProps) {
 	const [expanded, setExpanded] = useState(true)
 
 	const statusRing = (status: Machine['status']) => {
@@ -50,11 +52,82 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 	const onlineMachines = DUMMY_MACHINES.filter(m => m.status === 'online').length
 	const errorMachines  = DUMMY_MACHINES.filter(m => m.status === 'error').length
 
+	const sortedMachines = [...DUMMY_MACHINES].sort((a, b) =>
+		a.status === 'error' ? -1 : b.status === 'error' ? 1 : 0
+	)
+
+	// Mobile full-width layout
+	if (mobileFullWidth) {
+		return (
+			<div className="flex flex-col h-full bg-white">
+				{/* Stats bar */}
+				<div className="px-4 py-3 border-b border-gray-100 flex items-center gap-4">
+					<div className="flex items-center gap-2 text-sm">
+						<div className="w-3 h-3 bg-green-500 rounded-full" />
+						<span className="text-gray-600">{onlineMachines} Working</span>
+					</div>
+					<div className="flex items-center gap-2 text-sm">
+						<div className="w-3 h-3 bg-red-500 rounded-full" />
+						<span className="text-gray-600">{errorMachines} Error</span>
+					</div>
+				</div>
+
+				{/* Machine grid */}
+				<div className="flex-1 overflow-y-auto p-3 space-y-2">
+					{sortedMachines.map((machine) => (
+						<button
+							key={machine.id}
+							onClick={() => onMachineSelect?.(machine)}
+							className={clsx(
+								'w-full text-left p-3 rounded-xl transition-all duration-200',
+								selectedMachineId === machine.id
+									? 'bg-primary-50 border border-primary-300 shadow-sm'
+									: 'bg-white border border-gray-100 hover:border-gray-200 hover:shadow-sm'
+							)}
+						>
+							<div className="flex items-center gap-3">
+								{/* Thumbnail */}
+								<div className={clsx(
+									'relative flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden ring-2',
+									statusRing(machine.status)
+								)}>
+									<img
+										src={machine.photo}
+										alt={machine.name}
+										className="w-full h-full object-cover"
+									/>
+									<span className={clsx(
+										'absolute bottom-0.5 right-0.5 w-3 h-3 rounded-full border-2 border-white',
+										statusDot(machine.status)
+									)} />
+								</div>
+
+								{/* Info */}
+								<div className="min-w-0 flex-1">
+									<div className="flex items-center justify-between gap-2">
+										<h3 className="font-medium text-sm text-gray-900 truncate">
+											{machine.name}
+										</h3>
+										{machine.status === 'error' && (
+											<AlertCircle size={16} className="text-red-500 flex-shrink-0" />
+										)}
+									</div>
+									<p className="text-xs text-gray-500 mt-0.5">{machine.lastUpdate}</p>
+								</div>
+							</div>
+						</button>
+					))}
+				</div>
+			</div>
+		)
+	}
+
+	// Desktop sidebar layout
 	return (
 		<aside
 			className={clsx(
-				'bg-white border-r border-gray-200 shadow-sm transition-all duration-300 overflow-y-auto hidden md:flex md:flex-col',
-				expanded ? 'md:w-72' : 'md:w-16'
+				'bg-white border-r border-gray-200 shadow-sm transition-all duration-300 overflow-y-auto flex flex-col',
+				expanded ? 'w-72' : 'w-16'
 			)}
 		>
 			{/* Header */}
@@ -78,7 +151,6 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 					</button>
 				</div>
 
-				{/* Stats */}
 				{expanded && (
 					<div className="space-y-2 text-sm">
 						<div className="flex items-center gap-2">
@@ -95,7 +167,7 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 
 			{/* Machine List */}
 			<div className="flex-1 p-2 space-y-1">
-				{[...DUMMY_MACHINES].sort((a, b) => (a.status === 'error' ? -1 : b.status === 'error' ? 1 : 0)).map((machine) => (
+				{sortedMachines.map((machine) => (
 					<button
 						key={machine.id}
 						onClick={() => onMachineSelect?.(machine)}
@@ -108,7 +180,6 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 						title={machine.name}
 					>
 						<div className="flex items-center gap-3">
-							{/* Thumbnail with status ring */}
 							<div className={clsx(
 								'relative flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden ring-2',
 								statusRing(machine.status)
@@ -118,14 +189,12 @@ function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
 									alt={machine.name}
 									className="w-full h-full object-cover"
 								/>
-								{/* Status dot badge */}
 								<span className={clsx(
 									'absolute bottom-0.5 right-0.5 w-2.5 h-2.5 rounded-full border-2 border-white',
 									statusDot(machine.status)
 								)} />
 							</div>
 
-							{/* Name + meta */}
 							{expanded && (
 								<div className="min-w-0 flex-1">
 									<div className="flex items-start justify-between gap-1">
