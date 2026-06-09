@@ -1,0 +1,150 @@
+import { useState } from 'react'
+import { AlertCircle } from 'lucide-react'
+import clsx from 'clsx'
+
+export interface Machine {
+	id: string
+	name: string
+	status: 'online' | 'offline' | 'error'
+	lastUpdate: string
+	photo: string
+}
+
+const DUMMY_MACHINES: Machine[] = [
+	{ id: '1', name: 'CNC Machine 1',   status: 'online', lastUpdate: 'Just now',  photo: '/machines/cncmachine1.webp' },
+	{ id: '2', name: 'CNC Machine 2',   status: 'online', lastUpdate: '2 min ago', photo: '/machines/cncmachine2.jpg' },
+	{ id: '3', name: 'CNC Machine 3',   status: 'online', lastUpdate: '5 min ago', photo: '/machines/cncmachine3.png' },
+	{ id: '4', name: 'Robotic Arm 3',   status: 'error',  lastUpdate: '1 min ago', photo: '/machines/roboticarm.png' },
+	{ id: '5', name: 'Press Machine 1', status: 'online', lastUpdate: '3 min ago', photo: '/machines/pressmachine.webp' },
+	{ id: '6', name: 'Conveyor Belt 2', status: 'online', lastUpdate: '1 min ago', photo: '/machines/conveyorbelt.jpg' },
+	{ id: '7', name: 'Inspection Unit', status: 'online', lastUpdate: '4 min ago', photo: '/machines/inspectionunit.jpg' },
+	{ id: '8', name: 'CNC Machine 4',   status: 'online', lastUpdate: 'Just now',  photo: '/machines/cncmachine4.webp' },
+]
+
+interface MachineListProps {
+	selectedMachineId?: string
+	onMachineSelect?: (machine: Machine) => void
+}
+
+function MachineList({ selectedMachineId, onMachineSelect }: MachineListProps) {
+	const [expanded, setExpanded] = useState(true)
+
+	const statusRing = (status: Machine['status']) => {
+		switch (status) {
+			case 'online':  return 'ring-green-500'
+			case 'error':   return 'ring-red-500'
+			case 'offline': return 'ring-gray-400'
+			default:        return 'ring-gray-400'
+		}
+	}
+
+	const statusDot = (status: Machine['status']) => {
+		switch (status) {
+			case 'online':  return 'bg-green-500'
+			case 'error':   return 'bg-red-500'
+			case 'offline': return 'bg-gray-400'
+			default:        return 'bg-gray-400'
+		}
+	}
+
+	const onlineMachines = DUMMY_MACHINES.filter(m => m.status === 'online').length
+	const errorMachines  = DUMMY_MACHINES.filter(m => m.status === 'error').length
+
+	return (
+		<aside
+			className={clsx(
+				'bg-white border-r border-gray-200 shadow-sm transition-all duration-300 overflow-y-auto hidden md:flex md:flex-col',
+				expanded ? 'md:w-72' : 'md:w-16'
+			)}
+		>
+			{/* Header */}
+			<div className="p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+				<div className="flex items-center justify-between mb-3">
+					<h2 className={clsx('font-semibold text-gray-900 transition-opacity', !expanded && 'hidden')}>
+						Machines
+					</h2>
+					<button
+						onClick={() => setExpanded(!expanded)}
+						className="p-1 hover:bg-gray-100 rounded transition-colors"
+					>
+						<svg
+							className={clsx('w-5 h-5 text-gray-600 transition-transform', !expanded && 'rotate-180')}
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+						</svg>
+					</button>
+				</div>
+
+				{/* Stats */}
+				{expanded && (
+					<div className="space-y-2 text-sm">
+						<div className="flex items-center gap-2">
+							<div className="w-3 h-3 bg-green-500 rounded-full" />
+							<span className="text-gray-600">{onlineMachines} Working</span>
+						</div>
+						<div className="flex items-center gap-2">
+							<div className="w-3 h-3 bg-red-500 rounded-full" />
+							<span className="text-gray-600">{errorMachines} Error</span>
+						</div>
+					</div>
+				)}
+			</div>
+
+			{/* Machine List */}
+			<div className="flex-1 p-2 space-y-1">
+				{[...DUMMY_MACHINES].sort((a, b) => (a.status === 'error' ? -1 : b.status === 'error' ? 1 : 0)).map((machine) => (
+					<button
+						key={machine.id}
+						onClick={() => onMachineSelect?.(machine)}
+						className={clsx(
+							'w-full text-left p-2 rounded-lg transition-all duration-200',
+							selectedMachineId === machine.id
+								? 'bg-primary-50 border border-primary-300 shadow-sm'
+								: 'hover:bg-gray-50 border border-transparent'
+						)}
+						title={machine.name}
+					>
+						<div className="flex items-center gap-3">
+							{/* Thumbnail with status ring */}
+							<div className={clsx(
+								'relative flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden ring-2',
+								statusRing(machine.status)
+							)}>
+								<img
+									src={machine.photo}
+									alt={machine.name}
+									className="w-full h-full object-cover"
+								/>
+								{/* Status dot badge */}
+								<span className={clsx(
+									'absolute bottom-0.5 right-0.5 w-2.5 h-2.5 rounded-full border-2 border-white',
+									statusDot(machine.status)
+								)} />
+							</div>
+
+							{/* Name + meta */}
+							{expanded && (
+								<div className="min-w-0 flex-1">
+									<div className="flex items-start justify-between gap-1">
+										<h3 className="font-medium text-sm text-gray-900 truncate leading-tight">
+											{machine.name}
+										</h3>
+										{machine.status === 'error' && (
+											<AlertCircle size={15} className="text-red-500 flex-shrink-0 mt-0.5" />
+										)}
+									</div>
+									<p className="text-xs text-gray-500 mt-0.5">{machine.lastUpdate}</p>
+								</div>
+							)}
+						</div>
+					</button>
+				))}
+			</div>
+		</aside>
+	)
+}
+
+export default MachineList
