@@ -82,9 +82,12 @@ Machine Whisperer is growing to be capable of:
 - https://mdcplus.fi/blog/mazak-cnc-error-codes-explained-and-how-to-fix-them/
 - generated history/logs data parts.
 
-## **Schmas**
-- Schemas
-- Schemas
+#### The app uses MongoDB with synthetic industrial machine data.
+Collections:
+- cnc_events
+- machines
+- resolutions
+- shirt_notes
 
 
 #### Our solution architecture: 
