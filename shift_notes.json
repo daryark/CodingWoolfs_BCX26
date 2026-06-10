@@ -1,0 +1,3253 @@
+[
+  {
+    "_id": "NOTE-D897623B",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-04-19T05:56:03.067852+00:00",
+    "authorRole": "shift_lead",
+    "note": "the bar feeder alarm 101 intermittent. door hinge worn. maintenance order raised.",
+    "tags": [
+      "101",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-FB672A27",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-09-30T12:37:09.064693+00:00",
+    "authorRole": "shift_lead",
+    "note": "the Doosan cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-9BA8F42C",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-01-04T22:13:03.065954+00:00",
+    "authorRole": "maintenance",
+    "note": "handover: HCS03 running ok. 701 parts this shift.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-17285ED4",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-11-16T23:14:24.064077+00:00",
+    "authorRole": "maintenance",
+    "note": "NLX on line 1 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-7FA4B4D0",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-09-26T02:50:42.063666+00:00",
+    "authorRole": "maintenance",
+    "note": "quality hold lifted on Mazak 02. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-9BA03AA5",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-11-06T14:12:10.063875+00:00",
+    "authorRole": "operator",
+    "note": "power cut last night. the NLX lost home. re-homed all axes, ok.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-43A4B994",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-05-13T07:41:35.067872+00:00",
+    "authorRole": "maintenance",
+    "note": "the Haas lathe air pressure low \u2014 82 PSI. regulator adjusted.",
+    "tags": [
+      "156"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-52F257CA",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-02-07T09:35:20.064835+00:00",
+    "authorRole": "operator",
+    "note": "Fanuc 02 servo following error. same position every time \u2014 mechanical issue. WO#4804 raised.",
+    "tags": [
+      "SV0411",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SV0411"
+  },
+  {
+    "_id": "NOTE-9CF5A343",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-11-15T05:48:07.067795+00:00",
+    "authorRole": "operator",
+    "note": "Haas 02 axis 132. motor temp high. binding confirmed. WO#5422.",
+    "tags": [
+      "132",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-139B00C6",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2026-05-29T04:56:38.064418+00:00",
+    "authorRole": "operator",
+    "note": "SP0741 the DMG turning center. spindle encoder cable chafed near housing. replaced.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-280721C7",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-17T14:11:18.065467+00:00",
+    "authorRole": "shift_lead",
+    "note": "coolant low on HCS02. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-14D8C26A",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-07T20:12:34.067934+00:00",
+    "authorRole": "shift_lead",
+    "note": "quality hold lifted on the Haas lathe. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-B7A53897",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-11-29T12:48:04.062634+00:00",
+    "authorRole": "maintenance",
+    "note": "e-stop triggered on Mazak 01. door switch misaligned after cleaning. readjusted.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-02CD392B",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-04-18T22:02:36.063276+00:00",
+    "authorRole": "shift_lead",
+    "note": "Mazak 02 idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-84DEA9A6",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-11-03T12:25:48.067265+00:00",
+    "authorRole": "maintenance",
+    "note": "VF-2 idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-AE2B5CEE",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-05-07T04:43:59.066456+00:00",
+    "authorRole": "maintenance",
+    "note": "DMU 50 encoder signal fault. read head replaced. ok.",
+    "tags": [
+      "26000",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-B85EFD2C",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-01-13T23:43:21.066517+00:00",
+    "authorRole": "shift_lead",
+    "note": "encoder fault Siemens cell. scale had ali swarf on it. cleaned.",
+    "tags": [
+      "26000"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-C9B2CBEC",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-02T21:21:25.066244+00:00",
+    "authorRole": "operator",
+    "note": "the 5-axis running slow \u2014 programmed feedrate reduced to F185 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-4671347E",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-04-10T07:49:10.066309+00:00",
+    "authorRole": "operator",
+    "note": "Siemens cell encoder signal fault. read head replaced. ok.",
+    "tags": [
+      "26000",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-15902586",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-12-07T10:49:46.065873+00:00",
+    "authorRole": "operator",
+    "note": "F2028 deviation error Rexroth 02. found swarf in ballscrew. cleared.",
+    "tags": [
+      "F2028"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2028"
+  },
+  {
+    "_id": "NOTE-E14B1795",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-01-16T10:02:39.065420+00:00",
+    "authorRole": "operator",
+    "note": "the Rexroth HCS02 encoder alarm. reseated connector, pins had corrosion. ok for now.",
+    "tags": [
+      "F2074"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-39C1AB78",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-04-22T13:41:01.063499+00:00",
+    "authorRole": "maintenance",
+    "note": "QTN lathe e-stop. button was physically stuck. cleaned and released.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-99E82544",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-05T17:05:49.062248+00:00",
+    "authorRole": "maintenance",
+    "note": "alarm 447 the Mazak VMC. checked material cert \u2014 wrong grade delivered, C45 not 42CrMo4. told supervisor.",
+    "tags": [
+      "447",
+      "escalated"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-F6B86D5B",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-07-22T07:27:26.062908+00:00",
+    "authorRole": "operator",
+    "note": "spindle overload the turning cell. bearing noise audible before alarm. maintenance called.",
+    "tags": [
+      "447",
+      "work_order",
+      "escalated"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-DF6F5889",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-06-12T00:23:46.063914+00:00",
+    "authorRole": "maintenance",
+    "note": "SP0741 NLX on line 1. spindle encoder cable chafed near housing. replaced.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-63DCCB2A",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-05-14T11:23:19.066221+00:00",
+    "authorRole": "shift_lead",
+    "note": "380500 intermittent on the 5-axis. door sensor loose.",
+    "tags": [
+      "380500"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "380500"
+  },
+  {
+    "_id": "NOTE-1892317C",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-09T17:16:51.065073+00:00",
+    "authorRole": "maintenance",
+    "note": "preventive maintenance on the IndraDrive machine done \u2014 lube and filters checked.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-A08EB292",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-12-17T07:10:48.063249+00:00",
+    "authorRole": "shift_lead",
+    "note": "021 on the Mazak lathe twice this shift. orientation sensor suspect.",
+    "tags": [
+      "021",
+      "recurring"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-4A35040C",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-12T17:19:25.064546+00:00",
+    "authorRole": "operator",
+    "note": "NLX on line 1 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-8E2950B1",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-02-27T12:02:25.064917+00:00",
+    "authorRole": "shift_lead",
+    "note": "Puma lathe OT alarm after tool change \u2014 TT08 length not updated. fixed.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-ABBAA32A",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-02-24T02:01:10.063789+00:00",
+    "authorRole": "operator",
+    "note": "021 on Mazak 02 twice this shift. orientation sensor suspect.",
+    "tags": [
+      "021",
+      "recurring"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-45E24DE6",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-06-10T06:36:09.062860+00:00",
+    "authorRole": "operator",
+    "note": "Mazak 01 all good. no alarms. 3599 off BRACKET_OP10.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-1D50C796",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-10T15:31:38.067004+00:00",
+    "authorRole": "operator",
+    "note": "the Haas VMC \u2014 tool change due next shift. T04 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-7B7DD605",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-06-26T20:56:39.065050+00:00",
+    "authorRole": "operator",
+    "note": "Fanuc 02 OT alarm after tool change \u2014 TT16 length not updated. fixed.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-899DC715",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-05T19:46:25.067667+00:00",
+    "authorRole": "shift_lead",
+    "note": "Haas 02 air pressure low \u2014 82 PSI. regulator adjusted.",
+    "tags": [
+      "156"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-109F2F00",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-04-24T23:43:53.062988+00:00",
+    "authorRole": "shift_lead",
+    "note": "spindle alarm 21 on the turning cell. reset and restarted, ran ok for rest of shift.",
+    "tags": [
+      "021"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-9474AFBD",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-04-13T06:53:14.065333+00:00",
+    "authorRole": "operator",
+    "note": "F2074 encoder alarm HCS02. swapped cable from spare \u2014 fault followed cable. ordered new.",
+    "tags": [
+      "F2074",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-928164E3",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-05-14T10:31:18.065785+00:00",
+    "authorRole": "maintenance",
+    "note": "F2074 on the bigger Rexroth. motor encoder defective \u2014 confirmed by swap. sent to Rexroth.",
+    "tags": [
+      "F2074"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-CBA5C3AE",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-11-27T11:49:17.066576+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: the DMU running ok. 2171 parts this shift.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-AC2C413A",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-03-20T10:38:13.063831+00:00",
+    "authorRole": "operator",
+    "note": "NLX on line 1 \u2014 tool change due next shift. T20 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-19051433",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-08-03T22:49:50.067737+00:00",
+    "authorRole": "maintenance",
+    "note": "Haas 02 idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0B0E8C46",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-01T20:24:19.067953+00:00",
+    "authorRole": "operator",
+    "note": "the bar feeder \u2014 tool change due next shift. T15 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-83D01F28",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-08-14T13:28:16.065218+00:00",
+    "authorRole": "shift_lead",
+    "note": "the IndraDrive machine idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-A8F31745",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-21T15:24:29.063543+00:00",
+    "authorRole": "maintenance",
+    "note": "Mazak 02 threw 447 during BRACKET_OP10. drill looked fine but changed it anyway. cleared.",
+    "tags": [
+      "447"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-2F9F39C3",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-10-19T19:47:51.062224+00:00",
+    "authorRole": "shift_lead",
+    "note": "e-stop triggered on Mazak 01. door switch misaligned after cleaning. readjusted.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-AF691708",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-12-22T00:54:36.062655+00:00",
+    "authorRole": "shift_lead",
+    "note": "447 came back after 20min on VTC on line 3. not the drill \u2014 spindle fan blocked with ali dust. cleaned.",
+    "tags": [
+      "447"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-0D1AD7E2",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2026-02-07T00:11:55.064463+00:00",
+    "authorRole": "shift_lead",
+    "note": "quality hold lifted on the DMG turning center. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-08CFFF62",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-02-13T04:46:55.063766+00:00",
+    "authorRole": "operator",
+    "note": "preventive maintenance on the Mazak lathe done \u2014 lube and filters checked.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-4F51E928",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-05-29T02:50:31.066287+00:00",
+    "authorRole": "operator",
+    "note": "the 5-axis idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-C229C4BD",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-01-29T01:30:45.066494+00:00",
+    "authorRole": "operator",
+    "note": "the DMU \u2014 tool change due next shift. T13 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-3E8DD3BC",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-06-28T23:26:46.067486+00:00",
+    "authorRole": "maintenance",
+    "note": "new guy forgot to close door on the bar feeder. briefed.",
+    "tags": [
+      "101",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-17919111",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-11T18:59:46.066836+00:00",
+    "authorRole": "operator",
+    "note": "low air pressure alarm the Haas VMC. filter blocked. replaced.",
+    "tags": [
+      "156",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-FB84B9F7",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-27T14:45:41.063619+00:00",
+    "authorRole": "operator",
+    "note": "the turning cell e-stop. button was physically stuck. cleaned and released.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-EB8E2160",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-11-25T00:37:43.063453+00:00",
+    "authorRole": "maintenance",
+    "note": "021 on Mazak 02 twice this shift. orientation sensor suspect.",
+    "tags": [
+      "021",
+      "recurring"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-36519598",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-08-27T02:00:49.067813+00:00",
+    "authorRole": "maintenance",
+    "note": "servo overload Haas 02 Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-AC3C2761",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-08-11T09:38:33.063809+00:00",
+    "authorRole": "shift_lead",
+    "note": "the Mazak lathe cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-3D4CF733",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-07-09T02:22:44.067084+00:00",
+    "authorRole": "maintenance",
+    "note": "alarm 132 the Haas VMC. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-0287E5E0",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-12-21T03:26:56.066893+00:00",
+    "authorRole": "maintenance",
+    "note": "alarm 132 Haas 01. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-CA75811A",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-11-12T16:22:30.063853+00:00",
+    "authorRole": "shift_lead",
+    "note": "the NLX all good. no alarms. 2695 off FLANGE_OP30.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-40063547",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-10-26T22:27:21.066718+00:00",
+    "authorRole": "maintenance",
+    "note": "the green Haas cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0A6461D1",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-03-27T00:19:28.062589+00:00",
+    "authorRole": "shift_lead",
+    "note": "quality hold lifted on VTC on line 3. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-6C7B8C89",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-01T15:53:00.066653+00:00",
+    "authorRole": "maintenance",
+    "note": "alarm 132 Haas 01. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-370D3DAF",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-08-05T07:24:06.065692+00:00",
+    "authorRole": "operator",
+    "note": "F8069 the Rexroth HCS02. measured 21.8V on 24V supply. PSU replaced.",
+    "tags": [
+      "F8069",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-43838044",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-11-06T02:01:52.065507+00:00",
+    "authorRole": "operator",
+    "note": "F2074 encoder alarm the IndraDrive machine. swapped cable from spare \u2014 fault followed cable. ordered new.",
+    "tags": [
+      "F2074",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-E83FD79F",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-02T17:50:58.064586+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: Fanuc 02 running ok. 4843 parts this shift.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-4BFD28C2",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-09-29T11:05:54.066476+00:00",
+    "authorRole": "maintenance",
+    "note": "DMU 50 encoder signal fault. read head replaced. ok.",
+    "tags": [
+      "26000",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-86F7E901",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-01T21:29:26.066095+00:00",
+    "authorRole": "operator",
+    "note": "F2028 deviation error the bigger Rexroth. found swarf in ballscrew. cleared.",
+    "tags": [
+      "F2028"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2028"
+  },
+  {
+    "_id": "NOTE-774D0EFD",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-12T18:52:02.065197+00:00",
+    "authorRole": "operator",
+    "note": "coolant low on the IndraDrive machine. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-7A1A4C44",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-06-03T17:40:26.064567+00:00",
+    "authorRole": "operator",
+    "note": "handover: old Doosan has open WO#4745 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-4F257A59",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-02-19T01:01:53.065155+00:00",
+    "authorRole": "operator",
+    "note": "the Rexroth HCS02 running slow \u2014 programmed feedrate reduced to F115 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-06CC96FA",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-13T18:39:46.063564+00:00",
+    "authorRole": "operator",
+    "note": "Mazak 02 all good. no alarms. 991 off HOUSING_42_FINISH.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-42EB8B10",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-06-25T13:12:56.064894+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: Puma lathe has open WO#4819 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-650423F0",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-11-11T08:05:00.063978+00:00",
+    "authorRole": "operator",
+    "note": "handover: the DMG turning center has open WO#4650 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-DEB406E9",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-09T15:10:09.066152+00:00",
+    "authorRole": "operator",
+    "note": "axis deviation alarm HCS03. P-0-0045 adjusted. stable.",
+    "tags": [
+      "F2028"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2028"
+  },
+  {
+    "_id": "NOTE-C655F66A",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-06-29T09:06:17.063038+00:00",
+    "authorRole": "operator",
+    "note": "Mazak 02 e-stop. button was physically stuck. cleaned and released.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-2F488EAA",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-12-13T11:11:17.065276+00:00",
+    "authorRole": "shift_lead",
+    "note": "F2074 on Rexroth 01. motor encoder defective \u2014 confirmed by swap. sent to Rexroth.",
+    "tags": [
+      "F2074"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-34B4A1AC",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-10-13T08:26:49.065934+00:00",
+    "authorRole": "operator",
+    "note": "quality hold lifted on the bigger Rexroth. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-B71278C9",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-10-04T02:59:49.066051+00:00",
+    "authorRole": "maintenance",
+    "note": "Rexroth 02 running slow \u2014 programmed feedrate reduced to F136 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0870B79D",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-02T18:27:35.065392+00:00",
+    "authorRole": "shift_lead",
+    "note": "HCS02 internal voltage fault. drive power section failed. maintenance called.",
+    "tags": [
+      "F8069",
+      "work_order",
+      "escalated"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-6B410434",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-20T19:58:15.062567+00:00",
+    "authorRole": "shift_lead",
+    "note": "coolant low on Mazak 01. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0B8852ED",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-08-03T05:15:51.067606+00:00",
+    "authorRole": "maintenance",
+    "note": "ST-10 alarm 101 intermittent. door hinge worn. maintenance order raised.",
+    "tags": [
+      "101",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-3265DBC1",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-01-29T01:42:57.066948+00:00",
+    "authorRole": "operator",
+    "note": "quality hold lifted on the Haas VMC. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-6CFF59AA",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-09-02T22:54:42.064942+00:00",
+    "authorRole": "shift_lead",
+    "note": "SV0411 old Doosan X axis. found swarf in ballscrew cover. cleaned.",
+    "tags": [
+      "SV0411"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SV0411"
+  },
+  {
+    "_id": "NOTE-2A9A52C0",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-05-06T22:04:23.066194+00:00",
+    "authorRole": "shift_lead",
+    "note": "the 5-axis all good. no alarms. 1178 off BRACKET_OP10.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-DF00C63E",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-11-13T03:55:25.066985+00:00",
+    "authorRole": "operator",
+    "note": "servo overload VF-2 Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-0F1892A3",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-08-20T23:12:45.066328+00:00",
+    "authorRole": "maintenance",
+    "note": "drive fault the DMU. Profibus connector pulled loose during cabinet clean. reseated.",
+    "tags": [
+      "25201"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "25201"
+  },
+  {
+    "_id": "NOTE-43676805",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-07-05T11:54:04.062530+00:00",
+    "authorRole": "shift_lead",
+    "note": "spindle overload the big Mazak. bearing noise audible before alarm. maintenance called.",
+    "tags": [
+      "447",
+      "work_order",
+      "escalated"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-E8A1C68A",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-08-31T13:36:42.064607+00:00",
+    "authorRole": "shift_lead",
+    "note": "Fanuc 02 idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-B58FCCBD",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-03-15T10:18:24.065847+00:00",
+    "authorRole": "maintenance",
+    "note": "F8069 HCS03. measured 21.8V on 24V supply. PSU replaced.",
+    "tags": [
+      "F8069",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-37382EF8",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-11-11T12:47:47.067183+00:00",
+    "authorRole": "operator",
+    "note": "coolant low on Haas 01. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-8D329285",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-01-26T12:43:24.067401+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: the bar feeder has open WO#5342 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-5DD5600A",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-17T18:37:55.062749+00:00",
+    "authorRole": "maintenance",
+    "note": "021 on the Mazak VMC twice this shift. orientation sensor suspect.",
+    "tags": [
+      "021",
+      "recurring"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-0CC794EE",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-07-07T03:41:55.067146+00:00",
+    "authorRole": "operator",
+    "note": "101 on the green Haas. interlock switch replaced.",
+    "tags": [
+      "101",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-65201A8A",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-06-04T16:41:07.066911+00:00",
+    "authorRole": "operator",
+    "note": "coolant low on the green Haas. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-CEF04DFF",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-12-05T02:20:10.062125+00:00",
+    "authorRole": "maintenance",
+    "note": "quality hold lifted on the Mazak VMC. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-93B67280",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-12-01T13:58:07.067226+00:00",
+    "authorRole": "maintenance",
+    "note": "coolant low on the Haas VMC. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0ED21D92",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-17T17:44:44.064962+00:00",
+    "authorRole": "operator",
+    "note": "quality hold lifted on old Doosan. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-3D82DBDA",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-10-04T15:20:06.064980+00:00",
+    "authorRole": "operator",
+    "note": "preventive maintenance on the Doosan done \u2014 lube and filters checked.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-71EEF94B",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-11-05T13:01:03.065827+00:00",
+    "authorRole": "shift_lead",
+    "note": "F2028 deviation error HCS03. found swarf in ballscrew. cleared.",
+    "tags": [
+      "F2028"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2028"
+  },
+  {
+    "_id": "NOTE-A00346A9",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-04-08T18:02:25.064793+00:00",
+    "authorRole": "shift_lead",
+    "note": "coolant low on old Doosan. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-144AD4F9",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-07T19:09:45.064875+00:00",
+    "authorRole": "operator",
+    "note": "the Doosan cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-7BD7866B",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-03-18T07:57:19.067103+00:00",
+    "authorRole": "shift_lead",
+    "note": "Haas 01 \u2014 tool change due next shift. T18 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-63956E33",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-08-26T11:55:02.065244+00:00",
+    "authorRole": "operator",
+    "note": "encoder monitoring alarm HCS02. intermittent shielding fault on cable.",
+    "tags": [
+      "E2077"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "E2077"
+  },
+  {
+    "_id": "NOTE-666838A6",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-10-16T22:37:15.064244+00:00",
+    "authorRole": "maintenance",
+    "note": "NLX on line 1 all good. no alarms. 2395 off FLANGE_OP30.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-35841899",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-08-31T22:05:17.066634+00:00",
+    "authorRole": "maintenance",
+    "note": "alarm 132 Haas 01. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-F6E8BA43",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-12T20:54:42.064290+00:00",
+    "authorRole": "operator",
+    "note": "NLX on line 1 OT alarm after tool change \u2014 TT19 length not updated. fixed.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-7E3E56F9",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-06-02T08:52:31.064335+00:00",
+    "authorRole": "shift_lead",
+    "note": "overtravel on the NLX. G54 Z offset was wrong. corrected, restarted.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-D4574E77",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-12-31T17:49:52.065443+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: Rexroth 01 has open WO#4929 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-71A53CA4",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-03-01T07:50:56.065893+00:00",
+    "authorRole": "shift_lead",
+    "note": "Rexroth 02 \u2014 tool change due next shift. T02 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-4E5FD89A",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-04-26T10:09:57.064856+00:00",
+    "authorRole": "shift_lead",
+    "note": "SV0401 again Puma lathe. PSU voltage was 22V. replaced supply.",
+    "tags": [
+      "SV0401",
+      "recurring",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SV0401"
+  },
+  {
+    "_id": "NOTE-EA9B56BD",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-06-01T09:26:14.063746+00:00",
+    "authorRole": "operator",
+    "note": "Mazak 02 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-A1ED6706",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-07-25T08:49:38.066738+00:00",
+    "authorRole": "operator",
+    "note": "VF-2 alarm 101 intermittent. door hinge worn. maintenance order raised.",
+    "tags": [
+      "101",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-79F8CD9E",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-02-14T03:14:41.065114+00:00",
+    "authorRole": "shift_lead",
+    "note": "Rexroth 01 all good. no alarms. 1806 off SHAFT_ROUGH.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-FC26E7B0",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-10-02T17:38:31.066115+00:00",
+    "authorRole": "maintenance",
+    "note": "Rexroth 02 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-AF0A44ED",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-04-08T03:07:13.067043+00:00",
+    "authorRole": "shift_lead",
+    "note": "the Haas VMC axis 132. motor temp high. binding confirmed. WO#5279.",
+    "tags": [
+      "132",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-B0E6A290",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-06T19:47:15.064651+00:00",
+    "authorRole": "maintenance",
+    "note": "Fanuc 02 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-74D732BE",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-08-17T11:03:14.066757+00:00",
+    "authorRole": "shift_lead",
+    "note": "156 on the green Haas again. compressor output dropping in cold.",
+    "tags": [
+      "156",
+      "recurring"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-B0B8F7C2",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-11-13T07:22:04.067127+00:00",
+    "authorRole": "operator",
+    "note": "the Haas VMC alarm 101 intermittent. door hinge worn. maintenance order raised.",
+    "tags": [
+      "101",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-78E44C9D",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-05-20T00:36:57.067894+00:00",
+    "authorRole": "operator",
+    "note": "alarm 132 the bar feeder. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-FEDB4AF6",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-26T15:27:00.066265+00:00",
+    "authorRole": "shift_lead",
+    "note": "the 5-axis encoder signal fault. read head replaced. ok.",
+    "tags": [
+      "26000",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-92612631",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-06-20T06:49:50.063149+00:00",
+    "authorRole": "shift_lead",
+    "note": "e-stop triggered on Mazak 02. door switch misaligned after cleaning. readjusted.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-4A25600A",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-03-15T10:05:40.066595+00:00",
+    "authorRole": "maintenance",
+    "note": "the 5-axis encoder signal fault. read head replaced. ok.",
+    "tags": [
+      "26000",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-F1524D88",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-01T17:24:27.067776+00:00",
+    "authorRole": "operator",
+    "note": "Haas 02 axis 132. motor temp high. binding confirmed. WO#5420.",
+    "tags": [
+      "132",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-EC33CA30",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-08-01T13:46:24.067466+00:00",
+    "authorRole": "operator",
+    "note": "quality hold lifted on the Haas lathe. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-C5509840",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-06-09T13:27:27.064628+00:00",
+    "authorRole": "operator",
+    "note": "Fanuc 02 servo following error. same position every time \u2014 mechanical issue. WO#4761 raised.",
+    "tags": [
+      "SV0411",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SV0411"
+  },
+  {
+    "_id": "NOTE-66A4E1FD",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-02-08T08:15:13.067203+00:00",
+    "authorRole": "shift_lead",
+    "note": "Haas 01 running slow \u2014 programmed feedrate reduced to F233 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-2D76B93E",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-05-22T03:38:16.065178+00:00",
+    "authorRole": "operator",
+    "note": "Rexroth 01 F2028 recurring. drive replaced by Rexroth service. WO#4887",
+    "tags": [
+      "F2028",
+      "work_order",
+      "recurring",
+      "part_replaced",
+      "escalated"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "F2028"
+  },
+  {
+    "_id": "NOTE-501C54E4",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-01-20T06:12:23.063522+00:00",
+    "authorRole": "maintenance",
+    "note": "encoder alarm on QTN lathe Z axis. reseated cable at drive end. ok.",
+    "tags": [
+      "010"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "010"
+  },
+  {
+    "_id": "NOTE-470F48E5",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-08-16T20:31:32.067974+00:00",
+    "authorRole": "operator",
+    "note": "the bar feeder air pressure low \u2014 82 PSI. regulator adjusted.",
+    "tags": [
+      "156"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-319D73BA",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-09-26T06:52:58.063090+00:00",
+    "authorRole": "operator",
+    "note": "021 on Mazak 02 twice this shift. orientation sensor suspect.",
+    "tags": [
+      "021",
+      "recurring"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-C2FC97EE",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-11-12T22:14:31.062170+00:00",
+    "authorRole": "shift_lead",
+    "note": "encoder alarm on the big Mazak Z axis. reseated cable at drive end. ok.",
+    "tags": [
+      "010"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "010"
+  },
+  {
+    "_id": "NOTE-925800DD",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-02T21:57:37.064484+00:00",
+    "authorRole": "maintenance",
+    "note": "the NLX spindle amp alarm. amp replaced by maintenance. running.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-559D6994",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-12-21T19:24:57.067715+00:00",
+    "authorRole": "operator",
+    "note": "the bar feeder air pressure low \u2014 82 PSI. regulator adjusted.",
+    "tags": [
+      "156"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-A25C0D7F",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-27T21:03:58.066412+00:00",
+    "authorRole": "shift_lead",
+    "note": "the 5-axis safety circuit alarm. PLC logic updated by automation team.",
+    "tags": [
+      "380500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "380500"
+  },
+  {
+    "_id": "NOTE-CB9C5E1E",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-08-11T10:57:48.067588+00:00",
+    "authorRole": "shift_lead",
+    "note": "156 on the bar feeder again. compressor output dropping in cold.",
+    "tags": [
+      "156",
+      "recurring"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-7B0F68A8",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-05-20T23:54:31.063640+00:00",
+    "authorRole": "maintenance",
+    "note": "447 came back after 20min on the Mazak lathe. not the drill \u2014 spindle fan blocked with ali dust. cleaned.",
+    "tags": [
+      "447"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-F13D5FA6",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-10-27T11:12:13.063685+00:00",
+    "authorRole": "shift_lead",
+    "note": "Mazak 02 detector fault. Mazak service on the phone \u2014 says replace encoder.",
+    "tags": [
+      "010",
+      "escalated"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "010"
+  },
+  {
+    "_id": "NOTE-01DF4E58",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-22T14:25:56.063719+00:00",
+    "authorRole": "operator",
+    "note": "the Mazak lathe cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-AC44DDDA",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-06-01T17:37:04.067288+00:00",
+    "authorRole": "shift_lead",
+    "note": "alarm 132 the Haas VMC. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-105E38F5",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-12-27T10:31:43.063220+00:00",
+    "authorRole": "shift_lead",
+    "note": "quality hold lifted on the Mazak lathe. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-3C24C60F",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-02-12T07:27:45.064741+00:00",
+    "authorRole": "shift_lead",
+    "note": "the Doosan servo following error. same position every time \u2014 mechanical issue. WO#4782 raised.",
+    "tags": [
+      "SV0411",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SV0411"
+  },
+  {
+    "_id": "NOTE-21EDDCA7",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-11-17T04:41:22.067833+00:00",
+    "authorRole": "shift_lead",
+    "note": "coolant low on the bar feeder. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-86878CEE",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-11-12T15:36:53.064385+00:00",
+    "authorRole": "shift_lead",
+    "note": "NLX on line 1 servo following error. same position every time \u2014 mechanical issue. WO#4709 raised.",
+    "tags": [
+      "SV0411",
+      "work_order"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SV0411"
+  },
+  {
+    "_id": "NOTE-80C8272B",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-02-18T05:55:22.062840+00:00",
+    "authorRole": "shift_lead",
+    "note": "quality hold lifted on the Mazak VMC. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-1E2F3562",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-12-14T15:55:34.066375+00:00",
+    "authorRole": "operator",
+    "note": "the DMU \u2014 tool change due next shift. T19 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-E243185A",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2026-06-05T04:08:56.065031+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: Puma lathe has open WO#4842 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-E169A0EF",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-02-25T07:04:57.066557+00:00",
+    "authorRole": "operator",
+    "note": "handover: the DMU has open WO#5145 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-17A544A8",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-08-18T10:23:56.066074+00:00",
+    "authorRole": "shift_lead",
+    "note": "the new Rexroth idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "part_replaced"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-5C62D1C0",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-06-21T02:19:56.064670+00:00",
+    "authorRole": "shift_lead",
+    "note": "Fanuc 02 running slow \u2014 programmed feedrate reduced to F232 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-D271513F",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-07-02T23:47:00.064442+00:00",
+    "authorRole": "operator",
+    "note": "NLX on line 1 spindle amp alarm. amp replaced by maintenance. running.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-D383D658",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-31T21:12:36.066855+00:00",
+    "authorRole": "shift_lead",
+    "note": "101 on VF-2. interlock switch replaced.",
+    "tags": [
+      "101",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-EA644052",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-07-03T05:39:43.067446+00:00",
+    "authorRole": "operator",
+    "note": "quality hold lifted on Haas 02. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-5683A61E",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-12-04T05:44:15.062793+00:00",
+    "authorRole": "operator",
+    "note": "001 alarm \u2014 safety relay on VTC on line 3. maintenance replaced relay K3. running.",
+    "tags": [
+      "001",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-A452491C",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-07-19T22:32:06.066010+00:00",
+    "authorRole": "maintenance",
+    "note": "coolant low on HCS03. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-3D477B1F",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-08-17T14:48:45.064719+00:00",
+    "authorRole": "operator",
+    "note": "Puma lathe cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-C0B8B746",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-30T17:27:44.064058+00:00",
+    "authorRole": "shift_lead",
+    "note": "spindle overheat NLX on line 1. fan completely blocked. cleaned, monitoring temp.",
+    "tags": [
+      "SP0741"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-FB0766D3",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-04-13T09:43:26.066671+00:00",
+    "authorRole": "shift_lead",
+    "note": "coolant low on Haas 01. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-DF5F2398",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-10-07T06:31:31.063015+00:00",
+    "authorRole": "operator",
+    "note": "encoder alarm on Mazak 02 Z axis. reseated cable at drive end. ok.",
+    "tags": [
+      "010"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "010"
+  },
+  {
+    "_id": "NOTE-CB0BF4E4",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-17T16:32:33.063997+00:00",
+    "authorRole": "operator",
+    "note": "spindle overheat NLX on line 1. fan completely blocked. cleaned, monitoring temp.",
+    "tags": [
+      "SP0741"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-0D922239",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-04-06T21:22:18.062690+00:00",
+    "authorRole": "operator",
+    "note": "Mazak 01 threw 447 during SHAFT_ROUGH. drill looked fine but changed it anyway. cleared.",
+    "tags": [
+      "447"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-21474295",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-10-16T03:39:51.066817+00:00",
+    "authorRole": "maintenance",
+    "note": "156 on the green Haas again. compressor output dropping in cold.",
+    "tags": [
+      "156",
+      "recurring"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-9A8389E6",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-05-27T15:43:33.066614+00:00",
+    "authorRole": "maintenance",
+    "note": "380500 intermittent on DMU 50. door sensor loose.",
+    "tags": [
+      "380500"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "380500"
+  },
+  {
+    "_id": "NOTE-8A89F31C",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-06-27T12:41:18.066435+00:00",
+    "authorRole": "operator",
+    "note": "the DMU encoder signal fault. read head replaced. ok.",
+    "tags": [
+      "26000",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "26000"
+  },
+  {
+    "_id": "NOTE-8C2DA83A",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-11-26T19:08:35.066537+00:00",
+    "authorRole": "operator",
+    "note": "drive fault the DMU. Profibus connector pulled loose during cabinet clean. reseated.",
+    "tags": [
+      "25201"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "25201"
+  },
+  {
+    "_id": "NOTE-6B93A9DC",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-08T14:32:06.065973+00:00",
+    "authorRole": "shift_lead",
+    "note": "F8069 the bigger Rexroth. measured 21.8V on 24V supply. PSU replaced.",
+    "tags": [
+      "F8069",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-FBADE296",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-01-24T07:08:48.067164+00:00",
+    "authorRole": "maintenance",
+    "note": "servo overload VF-2 Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-91327C56",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-02-05T05:06:32.062961+00:00",
+    "authorRole": "operator",
+    "note": "001 alarm \u2014 safety relay on the Mazak lathe. maintenance replaced relay K3. running.",
+    "tags": [
+      "001",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-82A1F1A5",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-05-04T08:21:45.062201+00:00",
+    "authorRole": "operator",
+    "note": "handover: Mazak 01 has open WO#4406 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-EE9EBE61",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-08-18T03:16:50.066029+00:00",
+    "authorRole": "maintenance",
+    "note": "F2028 deviation error the new Rexroth. found swarf in ballscrew. cleared.",
+    "tags": [
+      "F2028",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2028"
+  },
+  {
+    "_id": "NOTE-AE60397A",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-04-05T13:16:57.065307+00:00",
+    "authorRole": "operator",
+    "note": "F2074 on the Rexroth HCS02. motor encoder defective \u2014 confirmed by swap. sent to Rexroth.",
+    "tags": [
+      "F2074"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-D054A98F",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-05-19T09:56:30.066798+00:00",
+    "authorRole": "maintenance",
+    "note": "servo overload VF-2 Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-D6B9B63E",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-09-04T22:30:14.065552+00:00",
+    "authorRole": "shift_lead",
+    "note": "F8069 Rexroth 01. measured 21.8V on 24V supply. PSU replaced.",
+    "tags": [
+      "F8069",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-8498A87F",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-08-17T05:58:19.064266+00:00",
+    "authorRole": "operator",
+    "note": "SP0741 the DMG turning center. spindle encoder cable chafed near housing. replaced.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-AECB82FD",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-18T14:20:22.067025+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: the green Haas has open WO#5273 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-7C794538",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-12-02T01:27:56.066929+00:00",
+    "authorRole": "shift_lead",
+    "note": "new guy forgot to close door on the Haas VMC. briefed.",
+    "tags": [
+      "101",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-B2487CB6",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-09-05T09:04:59.064039+00:00",
+    "authorRole": "operator",
+    "note": "SP0741 the NLX. spindle encoder cable chafed near housing. replaced.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-8C4DBEFF",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-01-19T17:50:05.062770+00:00",
+    "authorRole": "maintenance",
+    "note": "021 on the big Mazak twice this shift. orientation sensor suspect.",
+    "tags": [
+      "021",
+      "recurring"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-DBFB76D5",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-03-10T23:35:44.063590+00:00",
+    "authorRole": "maintenance",
+    "note": "the turning cell threw 447 during FLANGE_OP30. drill looked fine but changed it anyway. cleared.",
+    "tags": [
+      "447"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-76061FAB",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-09-27T06:55:21.062818+00:00",
+    "authorRole": "operator",
+    "note": "spindle overload VTC on line 3. bearing noise audible before alarm. maintenance called.",
+    "tags": [
+      "447",
+      "work_order",
+      "escalated"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "447"
+  },
+  {
+    "_id": "NOTE-A430D63A",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-04-09T23:15:31.067244+00:00",
+    "authorRole": "operator",
+    "note": "preventive maintenance on Haas 01 done \u2014 lube and filters checked.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-F6C677D8",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-01T15:47:08.063123+00:00",
+    "authorRole": "maintenance",
+    "note": "coolant low on QTN lathe. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-24BE473A",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-03-10T12:54:21.064220+00:00",
+    "authorRole": "maintenance",
+    "note": "overtravel on the NLX. G54 Z offset was wrong. corrected, restarted.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-9199B546",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2025-11-23T23:06:27.065095+00:00",
+    "authorRole": "maintenance",
+    "note": "the IndraDrive machine all good. no alarms. 740 off SHAFT_ROUGH.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0853D61E",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-08-04T19:10:01.067062+00:00",
+    "authorRole": "operator",
+    "note": "the Haas VMC running slow \u2014 programmed feedrate reduced to F169 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-18E606D3",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-12-25T07:27:40.067912+00:00",
+    "authorRole": "maintenance",
+    "note": "156 on the bar feeder again. compressor output dropping in cold.",
+    "tags": [
+      "156",
+      "recurring"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-B95A3EF5",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2025-10-31T18:16:44.064184+00:00",
+    "authorRole": "operator",
+    "note": "power cut last night. the DMG turning center lost home. re-homed all axes, ok.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-AB662BC0",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-02-07T13:55:46.065721+00:00",
+    "authorRole": "operator",
+    "note": "handover: the new Rexroth has open WO#4982 from last shift. not resolved.",
+    "tags": [
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-3C135B20",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-13T15:12:02.064018+00:00",
+    "authorRole": "maintenance",
+    "note": "overtravel on NLX on line 1. G54 Z offset was wrong. corrected, restarted.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-7D6C3A65",
+    "machineId": "cnc_siemens_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-06-13T11:50:03.066173+00:00",
+    "authorRole": "operator",
+    "note": "PLC alarm the 5-axis \u2014 safety door sensor. readjusted after hinge replacement.",
+    "tags": [
+      "380500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "380500"
+  },
+  {
+    "_id": "NOTE-C76DFAA0",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-03T21:21:19.064099+00:00",
+    "authorRole": "maintenance",
+    "note": "the NLX OT alarm after tool change \u2014 TT13 length not updated. fixed.",
+    "tags": [
+      "OT0500"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "OT0500"
+  },
+  {
+    "_id": "NOTE-7C3BF24A",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-25T18:43:42.065742+00:00",
+    "authorRole": "operator",
+    "note": "the bigger Rexroth encoder alarm. reseated connector, pins had corrosion. ok for now.",
+    "tags": [
+      "F2074"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-2BF18463",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-01-23T13:48:18.067568+00:00",
+    "authorRole": "operator",
+    "note": "156 on the bar feeder again. compressor output dropping in cold.",
+    "tags": [
+      "156",
+      "recurring"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-FC4666EA",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2026-03-16T08:59:31.065992+00:00",
+    "authorRole": "shift_lead",
+    "note": "handover: Rexroth 02 has open WO#5036 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-C56A4312",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-04-07T15:05:08.067506+00:00",
+    "authorRole": "operator",
+    "note": "low air pressure alarm Haas 02. filter blocked. replaced.",
+    "tags": [
+      "156",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-D25129CD",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-04-18T03:46:59.065530+00:00",
+    "authorRole": "maintenance",
+    "note": "the IndraDrive machine \u2014 tool change due next shift. T15 at life limit.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-E8146CDB",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-16T14:03:45.062612+00:00",
+    "authorRole": "operator",
+    "note": "e-stop triggered on the big Mazak. door switch misaligned after cleaning. readjusted.",
+    "tags": [
+      "001"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "001"
+  },
+  {
+    "_id": "NOTE-2D127B96",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-11-01T18:21:38.067649+00:00",
+    "authorRole": "maintenance",
+    "note": "alarm 132 ST-10. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-D4F8037A",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-08-25T11:30:41.065665+00:00",
+    "authorRole": "maintenance",
+    "note": "F2074 on the IndraDrive machine. motor encoder defective \u2014 confirmed by swap. sent to Rexroth.",
+    "tags": [
+      "F2074"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F2074"
+  },
+  {
+    "_id": "NOTE-F3B704DF",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-04-27T11:21:03.066873+00:00",
+    "authorRole": "shift_lead",
+    "note": "alarm 132 VF-2. load at 95%+. motor on order.",
+    "tags": [
+      "132",
+      "work_order",
+      "part_replaced"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-8B3A097F",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-09-23T21:58:35.065807+00:00",
+    "authorRole": "operator",
+    "note": "F8069 the bigger Rexroth. measured 21.8V on 24V supply. PSU replaced.",
+    "tags": [
+      "F8069",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-1EB7F3E1",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-08-21T08:20:39.064528+00:00",
+    "authorRole": "operator",
+    "note": "SV0401 again Fanuc 01. PSU voltage was 22V. replaced supply.",
+    "tags": [
+      "SV0401",
+      "recurring",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SV0401"
+  },
+  {
+    "_id": "NOTE-0A0B6B1F",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2026-03-14T02:05:53.063894+00:00",
+    "authorRole": "operator",
+    "note": "Fanuc 01 all good. no alarms. 2560 off SHAFT_ROUGH.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-540EED57",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-17T17:52:11.063958+00:00",
+    "authorRole": "maintenance",
+    "note": "the NLX spindle amp alarm. amp replaced by maintenance. running.",
+    "tags": [
+      "SP0741",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SP0741"
+  },
+  {
+    "_id": "NOTE-5A3161C9",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-11-28T10:07:35.066134+00:00",
+    "authorRole": "operator",
+    "note": "HCS03 all good. no alarms. 1564 off BRACKET_OP10.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-466CEF56",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-08-10T12:04:18.067758+00:00",
+    "authorRole": "maintenance",
+    "note": "handover: ST-10 has open WO#5413 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-9B2F0B6D",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-05-05T10:20:56.064763+00:00",
+    "authorRole": "maintenance",
+    "note": "old Doosan servo not ready. cleared after cabinet reset. monitoring.",
+    "tags": [
+      "SV0401"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "SV0401"
+  },
+  {
+    "_id": "NOTE-F5E16FAC",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-04T19:19:01.065487+00:00",
+    "authorRole": "maintenance",
+    "note": "encoder monitoring alarm the Rexroth HCS02. intermittent shielding fault on cable.",
+    "tags": [
+      "E2077"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "E2077"
+  },
+  {
+    "_id": "NOTE-5A31A48E",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2026-02-10T07:57:58.063934+00:00",
+    "authorRole": "shift_lead",
+    "note": "SV0401 on the DMG turning center. power cycled, cleared. DGN358 checked \u2014 bit 8 zero. MCC relay replaced.",
+    "tags": [
+      "SV0401",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SV0401"
+  },
+  {
+    "_id": "NOTE-CFF41D2A",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-08-25T19:42:57.067548+00:00",
+    "authorRole": "maintenance",
+    "note": "the bar feeder all good. no alarms. 1614 off HOUSING_42_FINISH.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-E22038E3",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-07-27T07:14:05.065605+00:00",
+    "authorRole": "shift_lead",
+    "note": "preventive maintenance on the IndraDrive machine done \u2014 lube and filters checked.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-6E48B558",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-06T19:19:41.065763+00:00",
+    "authorRole": "maintenance",
+    "note": "preventive maintenance on the new Rexroth done \u2014 lube and filters checked.",
+    "tags": [
+      "part_replaced"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-1537A1DC",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2026-02-17T23:32:10.064812+00:00",
+    "authorRole": "shift_lead",
+    "note": "the Doosan running slow \u2014 programmed feedrate reduced to F228 per engineering note.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-8F121A0B",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-05-04T00:03:25.066967+00:00",
+    "authorRole": "operator",
+    "note": "101 on Haas 01. interlock switch replaced.",
+    "tags": [
+      "101",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-2C7EFF24",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-05-04T09:28:19.062729+00:00",
+    "authorRole": "operator",
+    "note": "coolant low on the big Mazak. topped up.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-AE0CFF77",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "day",
+    "timestamp": "2025-11-13T07:08:30.064315+00:00",
+    "authorRole": "shift_lead",
+    "note": "NLX on line 1 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-70ED7FC0",
+    "machineId": "cnc_mazak_01",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-07-13T23:51:06.062879+00:00",
+    "authorRole": "shift_lead",
+    "note": "preventive maintenance on Mazak 01 done \u2014 lube and filters checked.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-252CAEF5",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-06-09T06:57:43.067369+00:00",
+    "authorRole": "operator",
+    "note": "servo overload ST-10 Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-6A0CAD06",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2026-03-28T02:15:17.067529+00:00",
+    "authorRole": "maintenance",
+    "note": "156 on Haas 02 again. compressor output dropping in cold.",
+    "tags": [
+      "156",
+      "recurring"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-7854CB43",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "afternoon",
+    "timestamp": "2025-08-24T14:30:02.065136+00:00",
+    "authorRole": "maintenance",
+    "note": "Rexroth 01 internal voltage fault. drive power section failed. maintenance called.",
+    "tags": [
+      "F8069",
+      "work_order",
+      "escalated"
+    ],
+    "openForNextShift": true,
+    "nativeCode": "F8069"
+  },
+  {
+    "_id": "NOTE-670A563D",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-08-21T16:56:10.067327+00:00",
+    "authorRole": "maintenance",
+    "note": "servo overload ST-10 Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-E9337B43",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-04-11T12:45:18.067425+00:00",
+    "authorRole": "shift_lead",
+    "note": "101 on Haas 02. interlock switch replaced.",
+    "tags": [
+      "101",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "101"
+  },
+  {
+    "_id": "NOTE-F71E8360",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2026-06-03T09:12:07.066689+00:00",
+    "authorRole": "operator",
+    "note": "VF-2 idle last 2hr \u2014 waiting for material delivery.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-6BCC399F",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-08-11T22:18:37.063332+00:00",
+    "authorRole": "operator",
+    "note": "spindle alarm 21 on QTN lathe. reset and restarted, ran ok for rest of shift.",
+    "tags": [
+      "021"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "021"
+  },
+  {
+    "_id": "NOTE-3CB54A97",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "night",
+    "timestamp": "2025-11-05T22:40:46.067688+00:00",
+    "authorRole": "operator",
+    "note": "low air pressure alarm Haas 02. filter blocked. replaced.",
+    "tags": [
+      "156",
+      "part_replaced"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-D8332045",
+    "machineId": "cnc_fanuc_02",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2026-02-17T22:47:05.065008+00:00",
+    "authorRole": "operator",
+    "note": "Fanuc 02 cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-47B82994",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "day",
+    "timestamp": "2025-09-29T13:10:58.066779+00:00",
+    "authorRole": "operator",
+    "note": "handover: the green Haas has open WO#5209 from last shift. not resolved.",
+    "tags": [
+      "work_order"
+    ],
+    "openForNextShift": true
+  },
+  {
+    "_id": "NOTE-6A842793",
+    "machineId": "cnc_mazak_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-03-17T20:09:35.062929+00:00",
+    "authorRole": "shift_lead",
+    "note": "the turning cell all good. no alarms. 2158 off SHAFT_ROUGH.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-0D4B5FFF",
+    "machineId": "cnc_rexroth_02",
+    "plant": "Munich",
+    "shiftName": "day",
+    "timestamp": "2025-11-25T13:07:34.065915+00:00",
+    "authorRole": "maintenance",
+    "note": "the new Rexroth cleaned and ready for next job. setup sheet left on machine.",
+    "tags": [
+      "part_replaced"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-B8F0EE1D",
+    "machineId": "cnc_rexroth_01",
+    "plant": "Munich",
+    "shiftName": "night",
+    "timestamp": "2026-04-02T22:57:53.065641+00:00",
+    "authorRole": "maintenance",
+    "note": "quality hold lifted on the IndraDrive machine. last 3 parts checked ok.",
+    "tags": [
+      "routine"
+    ],
+    "openForNextShift": false
+  },
+  {
+    "_id": "NOTE-D0774409",
+    "machineId": "cnc_haas_02",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2026-02-25T16:21:43.067626+00:00",
+    "authorRole": "operator",
+    "note": "Haas 02 air pressure low \u2014 82 PSI. regulator adjusted.",
+    "tags": [
+      "156"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "156"
+  },
+  {
+    "_id": "NOTE-F7D65A24",
+    "machineId": "cnc_haas_01",
+    "plant": "Berlin",
+    "shiftName": "afternoon",
+    "timestamp": "2025-07-12T19:08:44.067306+00:00",
+    "authorRole": "shift_lead",
+    "note": "servo overload the green Haas Y axis. chip impacted cover. cleared.",
+    "tags": [
+      "132"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "132"
+  },
+  {
+    "_id": "NOTE-E512D357",
+    "machineId": "cnc_fanuc_01",
+    "plant": "Stuttgart",
+    "shiftName": "night",
+    "timestamp": "2025-06-30T05:33:23.064507+00:00",
+    "authorRole": "operator",
+    "note": "SV0411 the DMG turning center X axis. found swarf in ballscrew cover. cleaned.",
+    "tags": [
+      "SV0411"
+    ],
+    "openForNextShift": false,
+    "nativeCode": "SV0411"
+  }
+]

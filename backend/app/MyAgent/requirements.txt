@@ -1,0 +1,9 @@
+pymongo[srv]
+boto3
+python-dotenv
+langchain
+langchain-core
+langgraph
+opentelemetry-api
+opentelemetry-sdk
+bedrock-agentcore

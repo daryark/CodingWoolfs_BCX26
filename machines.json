@@ -1,0 +1,335 @@
+[
+  {
+    "machineId": "cnc_mazak_01",
+    "brand": "Mazak",
+    "model": "VTC-300C",
+    "machineType": "Vertical Machining Center",
+    "controller": "Mazatrol",
+    "serialNumber": "VTC300C-20190847",
+    "installYear": 2019,
+    "plant": "Berlin",
+    "line": "Line-3",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5701,
+      "currentUrlExample": "http://cnc_mazak_01:5701/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 12000,
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "toolCapacity": 32,
+      "workEnvelopeMm": {
+        "x": 762,
+        "y": 460,
+        "z": 510
+      }
+    },
+    "maintenanceIntervalDays": 90,
+    "notes": "Primary drilling cell, high-duty cycle. Recurrent spindle load issues on drill operations.",
+    "lastMaintenanceDate": "2026-04-10",
+    "nextMaintenanceDue": "2026-07-09",
+    "daysSinceLastMaintenance": 60,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_mazak_02",
+    "brand": "Mazak",
+    "model": "QTN-200",
+    "machineType": "CNC Lathe",
+    "controller": "Mazatrol",
+    "serialNumber": "QTN200-20180321",
+    "installYear": 2018,
+    "plant": "Berlin",
+    "line": "Line-3",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5702,
+      "currentUrlExample": "http://cnc_mazak_02:5702/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 4000,
+      "axes": [
+        "X",
+        "Z"
+      ],
+      "toolCapacity": 12,
+      "workEnvelopeMm": {
+        "x": 400,
+        "y": null,
+        "z": 1000
+      }
+    },
+    "maintenanceIntervalDays": 90,
+    "notes": "Turning cell, shared coolant system with cnc_mazak_01.",
+    "lastMaintenanceDate": "2026-05-19",
+    "nextMaintenanceDue": "2026-08-17",
+    "daysSinceLastMaintenance": 21,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_fanuc_01",
+    "brand": "DMG Mori",
+    "model": "NLX2500",
+    "machineType": "CNC Turning Center",
+    "controller": "Fanuc 31i",
+    "serialNumber": "NLX2500-20200512",
+    "installYear": 2020,
+    "plant": "Stuttgart",
+    "line": "Line-1",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5703,
+      "currentUrlExample": "http://cnc_fanuc_01:5703/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 5000,
+      "axes": [
+        "X",
+        "Z",
+        "C"
+      ],
+      "toolCapacity": 20,
+      "workEnvelopeMm": {
+        "x": 500,
+        "y": null,
+        "z": 1250
+      }
+    },
+    "maintenanceIntervalDays": 120,
+    "notes": "High-precision turning. Servo alarms increase after coolant system maintenance.",
+    "lastMaintenanceDate": "2026-05-03",
+    "nextMaintenanceDue": "2026-08-31",
+    "daysSinceLastMaintenance": 37,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_fanuc_02",
+    "brand": "Doosan",
+    "model": "Puma 2600",
+    "machineType": "CNC Lathe",
+    "controller": "Fanuc 0i-TF",
+    "serialNumber": "PUMA2600-20170933",
+    "installYear": 2017,
+    "plant": "Stuttgart",
+    "line": "Line-2",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5704,
+      "currentUrlExample": "http://cnc_fanuc_02:5704/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 3500,
+      "axes": [
+        "X",
+        "Z"
+      ],
+      "toolCapacity": 12,
+      "workEnvelopeMm": {
+        "x": 520,
+        "y": null,
+        "z": 1270
+      }
+    },
+    "maintenanceIntervalDays": 90,
+    "notes": "Oldest machine on floor. Encoder cable known issue \u2014 scheduled for replacement Q3.",
+    "lastMaintenanceDate": "2026-05-23",
+    "nextMaintenanceDue": "2026-08-21",
+    "daysSinceLastMaintenance": 17,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_rexroth_01",
+    "brand": "Bosch Rexroth",
+    "model": "IndraDrive HCS02",
+    "machineType": "CNC Machining Center",
+    "controller": "Rexroth IndraDrive",
+    "serialNumber": "HCS02-20211204",
+    "installYear": 2021,
+    "plant": "Munich",
+    "line": "Line-5",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5705,
+      "currentUrlExample": "http://cnc_rexroth_01:5705/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 8000,
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "toolCapacity": 24,
+      "workEnvelopeMm": {
+        "x": 600,
+        "y": 500,
+        "z": 400
+      }
+    },
+    "maintenanceIntervalDays": 180,
+    "notes": "Bosch Rexroth IndraDrive system. IndraWorks Ds required for parameter-level diagnosis.",
+    "lastMaintenanceDate": "2026-05-02",
+    "nextMaintenanceDue": "2026-10-29",
+    "daysSinceLastMaintenance": 38,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_rexroth_02",
+    "brand": "Bosch Rexroth",
+    "model": "IndraDrive HCS03",
+    "machineType": "CNC Machining Center",
+    "controller": "Rexroth IndraDrive",
+    "serialNumber": "HCS03-20221108",
+    "installYear": 2022,
+    "plant": "Munich",
+    "line": "Line-5",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5706,
+      "currentUrlExample": "http://cnc_rexroth_02:5706/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 10000,
+      "axes": [
+        "X",
+        "Y",
+        "Z",
+        "A"
+      ],
+      "toolCapacity": 30,
+      "workEnvelopeMm": {
+        "x": 800,
+        "y": 600,
+        "z": 500
+      }
+    },
+    "maintenanceIntervalDays": 180,
+    "notes": "Newer HCS03 unit. F8055 inrush current fault seen on cold starts in winter \u2014 dedicated PSU installed 2023.",
+    "lastMaintenanceDate": "2026-03-01",
+    "nextMaintenanceDue": "2026-08-28",
+    "daysSinceLastMaintenance": 100,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_siemens_01",
+    "brand": "DMG Mori",
+    "model": "DMU 50",
+    "machineType": "5-Axis Machining Center",
+    "controller": "Siemens Sinumerik 840D",
+    "serialNumber": "DMU50-20201789",
+    "installYear": 2020,
+    "plant": "Munich",
+    "line": "Line-4",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5707,
+      "currentUrlExample": "http://cnc_siemens_01:5707/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 18000,
+      "axes": [
+        "X",
+        "Y",
+        "Z",
+        "B",
+        "C"
+      ],
+      "toolCapacity": 60,
+      "workEnvelopeMm": {
+        "x": 500,
+        "y": 450,
+        "z": 400
+      }
+    },
+    "maintenanceIntervalDays": 120,
+    "notes": "5-axis precision cell. PLC alarm 380500 triggered by safety door sensor \u2014 known intermittent issue.",
+    "lastMaintenanceDate": "2026-04-25",
+    "nextMaintenanceDue": "2026-08-23",
+    "daysSinceLastMaintenance": 45,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_haas_01",
+    "brand": "Haas",
+    "model": "VF-2",
+    "machineType": "Vertical Machining Center",
+    "controller": "Haas NGC",
+    "serialNumber": "VF2-20180456",
+    "installYear": 2018,
+    "plant": "Berlin",
+    "line": "Line-1",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5708,
+      "currentUrlExample": "http://cnc_haas_01:5708/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 8100,
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "toolCapacity": 20,
+      "workEnvelopeMm": {
+        "x": 762,
+        "y": 406,
+        "z": 508
+      }
+    },
+    "maintenanceIntervalDays": 90,
+    "notes": "General purpose VMC. Air pressure alarm 156 seen in winter \u2014 compressor output drops in cold.",
+    "lastMaintenanceDate": "2026-05-05",
+    "nextMaintenanceDue": "2026-08-03",
+    "daysSinceLastMaintenance": 35,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  },
+  {
+    "machineId": "cnc_haas_02",
+    "brand": "Haas",
+    "model": "ST-10",
+    "machineType": "CNC Lathe",
+    "controller": "Haas NGC",
+    "serialNumber": "ST10-20190212",
+    "installYear": 2019,
+    "plant": "Berlin",
+    "line": "Line-2",
+    "mtconnect": {
+      "protocol": "MTConnect",
+      "port": 5709,
+      "currentUrlExample": "http://cnc_haas_02:5709/current"
+    },
+    "specs": {
+      "maxSpindleRpm": 6000,
+      "axes": [
+        "X",
+        "Z"
+      ],
+      "toolCapacity": 12,
+      "workEnvelopeMm": {
+        "x": 330,
+        "y": null,
+        "z": 660
+      }
+    },
+    "maintenanceIntervalDays": 90,
+    "notes": "Bar-feed turning cell. ATC alarm 263 common after tool table edits \u2014 operator training issue.",
+    "lastMaintenanceDate": "2026-04-21",
+    "nextMaintenanceDue": "2026-07-20",
+    "daysSinceLastMaintenance": 49,
+    "maintenanceOverdue": false,
+    "createdAt": "2026-06-09T13:48:14.890405+00:00"
+  }
+]

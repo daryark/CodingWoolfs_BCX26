@@ -13,6 +13,7 @@ const resources = {
 				clear: 'Clear',
 				cancel: 'Cancel',
 				close: 'Close',
+				back: 'Back',
 			},
 			app: {
 				title: 'MachineWhisperer',
@@ -21,6 +22,41 @@ const resources = {
 				chat: 'Chat',
 				voice: 'Voice',
 				photo: 'Photo',
+			},
+			machines: {
+				title: 'Machines',
+				working: 'Working',
+				error: 'Error',
+				online: 'Online',
+				offline: 'Offline',
+				machineDetails: 'Machine Details',
+				controller: 'Controller',
+				installYear: 'Install year',
+				nextMaintenance: 'Next maintenance',
+				serial: 'Serial',
+				lastUpdate: 'Last update',
+				eventLog: 'Event Log',
+				noEvents: 'No events recorded for this machine.',
+				clickReport: 'Click any row with a 📄 icon to open its incident report.',
+				startAssistant: 'Start Assistant',
+				startChat: 'Start Chat',
+				failedToLoad: 'Failed to load machines.',
+				viewReport: 'View incident report',
+				time: {
+					justNow: 'Just now',
+					'1min': '1 min ago',
+					'2min': '2 min ago',
+					'3min': '3 min ago',
+					'4min': '4 min ago',
+					'5min': '5 min ago',
+				},
+			},
+			report: {
+				title: 'Incident Report',
+				issue: 'Issue',
+				whatWasTried: 'What Was Tried',
+				solution: 'Solution',
+				resolvedAt: 'Resolved at',
 			},
 			chat: {
 				placeholder: 'Type your question here...',
@@ -67,6 +103,7 @@ const resources = {
 				clear: 'Löschen',
 				cancel: 'Abbrechen',
 				close: 'Schließen',
+				back: 'Zurück',
 			},
 			app: {
 				title: 'MachineWhisperer',
@@ -75,6 +112,41 @@ const resources = {
 				chat: 'Chat',
 				voice: 'Sprache',
 				photo: 'Foto',
+			},
+			machines: {
+				title: 'Maschinen',
+				working: 'In Betrieb',
+				error: 'Fehler',
+				online: 'Online',
+				offline: 'Offline',
+				machineDetails: 'Maschinendetails',
+				controller: 'Steuerung',
+				installYear: 'Baujahr',
+				nextMaintenance: 'Nächste Wartung',
+				serial: 'Seriennummer',
+				lastUpdate: 'Letzte Aktualisierung',
+				eventLog: 'Ereignisprotokoll',
+				noEvents: 'Keine Ereignisse für diese Maschine aufgezeichnet.',
+				clickReport: 'Klicken Sie auf eine Zeile mit 📄 Symbol, um den Bericht zu öffnen.',
+				startAssistant: 'Assistent starten',
+				startChat: 'Chat starten',
+				failedToLoad: 'Maschinen konnten nicht geladen werden.',
+				viewReport: 'Störungsbericht anzeigen',
+				time: {
+					justNow: 'Gerade eben',
+					'1min': 'vor 1 Min.',
+					'2min': 'vor 2 Min.',
+					'3min': 'vor 3 Min.',
+					'4min': 'vor 4 Min.',
+					'5min': 'vor 5 Min.',
+				},
+			},
+			report: {
+				title: 'Störungsbericht',
+				issue: 'Problem',
+				whatWasTried: 'Was versucht wurde',
+				solution: 'Lösung',
+				resolvedAt: 'Behoben um',
 			},
 			chat: {
 				placeholder: 'Geben Sie Ihre Frage hier ein...',
@@ -114,11 +186,16 @@ const resources = {
 
 i18n.use(initReactI18next).init({
 	resources,
-	lng: 'en',
+	lng: localStorage.getItem('language') || 'en',
 	fallbackLng: 'en',
 	interpolation: {
 		escapeValue: false,
 	},
+})
+
+// Persist language choice on change
+i18n.on('languageChanged', (lng) => {
+	localStorage.setItem('language', lng)
 })
 
 export default i18n
