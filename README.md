@@ -72,7 +72,6 @@ Machine Whisperer is growing to be capable of:
 ## **Tools & Integrations**
 <img width="120" height="120" alt="bedrock" src="https://github.com/user-attachments/assets/a8ecd9b9-c230-4656-ba1c-88b75b540bfc" />
 <img width="120" height="120" alt="Vorschaubild-MongoDB-Atlas (1)" src="https://github.com/user-attachments/assets/10dbfb63-ce52-4490-82cf-ee90a0f7b557" />
-<img width="180" height="86" alt="qcg7xozujcfuwcwdngig" src="https://github.com/user-attachments/assets/dc7f7107-bb1a-4403-a028-ccd33f9337a9" />
 <br>
 
 ## **Data modeling**
@@ -88,6 +87,55 @@ Collections:
 - machines
 - resolutions
 - shirt_notes
+
+#### Seed data example and fields
+> [!NOTE]
+> The following document is a representative sample from the synthetic MongoDB seed dataset.
+> It shows the structure of a machine entity used by the application.
+> <br>
+> <br>
+> The full dataset contains additional document types, including machine status data, error logs, maintenance records, part-level information, and prediction-related data. Only one sample is shown here to keep the
+documentation readable.
+> <br>
+
+```
+{
+  "_id": {
+    "$oid": "6a28131b950823bca78e08f2"
+  },
+  "timestamp": "2026-04-06T19:02:04.591044+00:00",
+  "machine": {
+    "id": "cnc_mazak_02",
+    "name": "Mazak QTN-200",
+    "manufacturer": "Mazak",
+    "controller": "Mazatrol"
+  },
+  "error": {
+    "nativeCode": "203",
+    "conditionType": "ACTUATOR",
+    "conditionState": "Fault",
+    "description": "ATC arm fault",
+    "causes": [
+      "Tool changer incomplete sequence",
+      "Tool pot sensor fault"
+    ],
+    "fixHint": "Check ATC sensors, verify air pressure",
+    "qualifier": "HIGH"
+  },
+  "mtconnect": {
+    "dataItemId": "cnc_mazak_02_cond_2",
+    "sequence": 660296,
+    "componentType": "Controller"
+  },
+  "status": "CLEARED",
+  "resolvedAt": "2026-04-06T21:18:27.591044+00:00",
+  "durationSeconds": 8183,
+  "recurrenceIndex": 4,
+  "shift": "afternoon",
+  "plant": "Munich"
+}
+```
+
 
 
 #### Our solution architecture: 
