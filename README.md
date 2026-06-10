@@ -18,18 +18,19 @@
 <br>
 
 ## **Challenge: Machine Whisperer**
-Optimize manufacturing maintenance efficiency by building an AI-assistant.
-<br>
-Synthesize dense technical documentation into actionable guidance.
+> Optimize manufacturing maintenance efficiency by building an AI-assistant.
+> <br>
+> Synthesize dense technical documentation into actionable guidance.
 
 ## **Core Idea**
-Deliver exact troubleshooting solution directly to shop-floor.
+#### Deliver exact troubleshooting solution directly to shop-floor.
+<br>
 
 ## **MVP**
 ### AI-assistant that reduses the estimated downtime for the machine up to 85% time.<sup>1</sup>
-Machine Whisperer makes knowledge searchable, reusable and improves with every accident.
-<br>
-Minimizes dependency on individual specialists and preserving expert knowledge.
+> Machine Whisperer makes knowledge searchable, reusable and improves with every accident.
+> <br>
+> Minimizes dependency on individual specialists and preserving expert knowledge.
 <br>
 
 - [X] Text, voice and photo troubleshooting.
@@ -38,22 +39,41 @@ Minimizes dependency on individual specialists and preserving expert knowledge.
 - [X] Cross-machine knowledge from similar models and previous repair cases.
 - [X] Access to machine history, maintainance logs, shift books and technician notes.
 <br>
-<sub><sup>1</sup> AI-assistant with case memory and smart search estimated troubleshooting time: ~5-10mins</sub>
-<br>
-<sub>Manual troubleshouting estimated time ~20-50mins or even more in worst case scenario.</sub>
 
+> [!NOTE]
+> <sup>1</sup> AI-assistant with case memory and smart search estimated troubleshooting time: ~5-10mins
+> <br>
+> Manual troubleshouting estimated time ~20-50mins or even more in worst case scenario.
+<br>
 
 ## **Future iteration plan**
-#### Cross-factory expert knowledge network:
+### Cross-factory expert knowledge network:
 In future iterations, the platform can aggregate anonymized maintenance knowledge across multiple factories, enabling organizations to benefit from collective operational experience and continuously improving recommendations.
+<br>
 
-#### AI maintenance copilot
+### AI maintenance copilot
 Use smart glasses to detect the machine type, error and guide the technician via the troubleshooting process, directly pointing on the details need to be repaired visually and talking without a need to recieve the previous description in text prompt.
+<br>
+
+### Predictive Maintenance & Failure Intelligence
+The system continuously analyzes historical incidents across machines, components, and repair outcomes to identify failure patterns and correlations. Using historical maintenance data, the system can predict when a component is approaching its expected service life.
+> "If historical data shows that Component B frequently fails after Component A, the AI can warn technicians before the secondary failure occurs."
+
+> [!IMPORTANT]
+> As the dataset grows across multiple factories, the platform evolves from a troubleshooting assistant into a predictive maintenance system
+
+Machine Whisperer is growing to be capable of:
+- Anticipating failures before they occur
+- Optimizing spare parts inventory
+- Reducing machine downtime
+- Supporting reliability engineering and continuous product improvement
+<br>
 
 ## **Tools & Integrations**
-- AWS Bedrock
-- MongoDB Atlas
-- Kiro
+<img width="120" height="120" alt="bedrock" src="https://github.com/user-attachments/assets/a8ecd9b9-c230-4656-ba1c-88b75b540bfc" />
+<img width="120" height="120" alt="Vorschaubild-MongoDB-Atlas (1)" src="https://github.com/user-attachments/assets/10dbfb63-ce52-4490-82cf-ee90a0f7b557" />
+<img width="180" height="86" alt="qcg7xozujcfuwcwdngig" src="https://github.com/user-attachments/assets/dc7f7107-bb1a-4403-a028-ccd33f9337a9" />
+<br>
 
 ## **Data modeling**
 #### Data used to create the seed:
