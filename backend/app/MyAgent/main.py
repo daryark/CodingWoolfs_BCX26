@@ -1,3 +1,4 @@
+import logging
 from typing import Any
 
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -111,8 +112,15 @@ async def invoke(payload, context):
         config={"callbacks": [callback]},
     )
 
-    # Return result
-    output = result["messages"][-1].content
+    # Safely extract the final text output from the assistant
+    output = "I couldn't generate a text response."
+    
+    # Loop backward to find the last AI response that contains text content
+    for msg in reversed(result.get("messages", [])):
+        if msg.type == "ai" and msg.content:
+            output = msg.content
+            break
+
     log.info(f"Agent output: {output}")
     return {"result": output}
 
