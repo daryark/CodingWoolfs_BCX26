@@ -139,20 +139,5 @@ documentation readable.
 
 
 #### Our solution architecture: 
-*[Sketch your technical architecture or data flow to help understand your technical approach. You can edit the mermaid chart below:]*
+<img width="1567" height="648" alt="arch" src="https://github.com/user-attachments/assets/189b93f0-2542-4d81-827e-06536e71b37a" />
 
-```mermaid
-graph LR;
-    subgraph Edge / Hardware
-        Sensor[IoT Sensor / Device] -->|MQTT| Gateway[Edge Gateway]
-    end
-    
-    subgraph Cloud / Backend
-        Gateway -->|Data Ingestion| API[AWS API Gateway]
-        API <--> DB[(MongoDB)]
-        API <--> ML[AI/ML Model]
-    end
-    
-    subgraph Client / UI
-        API -->|REST / GraphQL| App[Web / Mobile Dashboard]
-    end
