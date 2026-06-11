@@ -78,7 +78,16 @@ def save_json(path, data):
     tmp = path.with_suffix(path.suffix + ".tmp")
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(data, f)
-    tmp.replace(path)
+
+    # OneDrive / antivirus on Windows can briefly lock the target file
+    for attempt in range(8):
+        try:
+            tmp.replace(path)
+            return
+        except PermissionError:
+            if attempt == 7:
+                raise
+            time.sleep(1.5 * (attempt + 1))
 
 
 def doc_for_mongo(doc):
