@@ -7,11 +7,11 @@
 | Name | GitHub Handle | Role(s) |
 | :--- | :--- | :--- |
 | Andor Tamás | [@tammasandor](https://github.com/tamasandor) | Backend, DevOps |
-| Dasha Yarkovska | [@daryark](https://github.com/daryark) | e.g. UX, Pitcher |
-| Lais Kurdy  | [@lkurdy ](https://github.com/lkurdy ) | Backend, Architecture |
-| Marianna Zhukova | [@fraumarzhuk](https://github.com/fraumarzhuk) | Frontend, UX, Pitcher |
-| Mariia Peretiatko | [@MariPeretiatko](https://github.com/MariPeretiatko) | e.g., Backend, Frontend, UX, Pitcher |
-| Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | e.g., Backend, Frontend, UX, Pitcher |
+| Daria Yarkovska | [@daryark](https://github.com/daryark) | Documentation, Pitcher |
+| Lais Kurdy  | [@lkurdy ](https://github.com/lkurdy ) | Backend, Architecture, Pitcher |
+| Marianna Zhukova | [@fraumarzhuk](https://github.com/fraumarzhuk) | Frontend, UX |
+| Mariia Peretiatko | [@MariPeretiatko](https://github.com/MariPeretiatko) | Presentation |
+| Oscar Kerscher | [@kawaiiotta](https://github.com/kawaiiotta) | Backend, AI integration, Pitcher |
 
 
 # Access the deployed version via: https://hackathon.tamasandor.de/
